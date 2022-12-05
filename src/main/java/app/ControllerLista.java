@@ -100,13 +100,16 @@ public class ControllerLista {
     @FXML
     private TextField inputSearch;
     @FXML
-    private TextField posSearchResult;
+    private TextField resultSeach;
+    @FXML
+    private TextField removed;
 
     // botões
     @FXML
     private Button btnInsert;
     @FXML
     private Button btnRemove;
+    // fim botões
 
     // slots de texto com conteúdo
     @FXML
@@ -183,74 +186,206 @@ public class ControllerLista {
     private Text t14;
     @FXML
     private Rectangle slot14;
+    // fim conteudo
 
     @FXML
     private void insert() {
         System.out.println("Inserindo");
 
-        t00.setVisible(true);
-        slot00.setVisible(true);
-        t00.setText("teste");
+        int position = Integer.parseInt(inputPosition.getText());
+        String element = inputElement.getText();
 
-        t01.setVisible(true);
-        slot01.setVisible(true);
-        t01.setText("teste");
+        if (!listaSeq.insere(position, element)) {
+            System.out.println("Error");
+        }
 
-        t02.setVisible(true);
-        slot02.setVisible(true);
-        t02.setText("teste");
+        System.out.println("Tamanho:" + listaSeq.tamanho());
 
-        t03.setVisible(true);
-        slot03.setVisible(true);
-        t03.setText("teste");
-
-        t04.setVisible(true);
-        slot04.setVisible(true);
-        t04.setText("teste");
-
-        t05.setVisible(true);
-        slot05.setVisible(true);
-        t05.setText("teste");
-
-        t06.setVisible(true);
-        slot06.setVisible(true);
-        t06.setText("teste");
-
-        t07.setVisible(true);
-        slot07.setVisible(true);
-        t07.setText("teste");
-
-        t08.setVisible(true);
-        slot08.setVisible(true);
-        t08.setText("teste");
-
-        t09.setVisible(true);
-        slot09.setVisible(true);
-        t09.setText("teste");
-
-        t10.setVisible(true);
-        slot10.setVisible(true);
-        t10.setText("teste");
-
-        t11.setVisible(true);
-        slot11.setVisible(true);
-        t11.setText("teste");
-
-        t12.setVisible(true);
-        slot12.setVisible(true);
-        t12.setText("teste");
-
-        t13.setVisible(true);
-        slot13.setVisible(true);
-        t13.setText("teste");
-
-        t14.setVisible(true);
-        slot14.setVisible(true);
-        t14.setText("teste");
+        render();
     }
 
     @FXML
     private void remove() {
         System.out.println("Removendo");
+
+        int position = Integer.parseInt(inputPosition.getText());
+
+        String removido = listaSeq.remove(position);
+
+        if (removido.equals("-1")) {
+            System.out.println("Error");
+        } else {
+            removed.setText(removido);
+            System.out.println("Elemento removido: " + removido);
+        }
+
+        System.out.println("Tamanho:" + listaSeq.tamanho());
+        render();
+    }
+
+    @FXML
+    private void find() {
+        System.out.println("Procurando");
+        String procurado = inputSearch.getText();
+
+        int result = listaSeq.posicao(procurado);
+        if (result > 0) {
+            resultSeach.setText(Integer.toString(result));
+        } else {
+            resultSeach.setText("Null");
+        }
+    }
+
+    // render
+    public void render() {
+        if (!("-1").equals(listaSeq.elemento(1))) {
+            t00.setVisible(true);
+            slot00.setVisible(true);
+            t00.setText(listaSeq.elemento(1));
+        } else {
+            t00.setVisible(false);
+            slot00.setVisible(false);
+            t00.setText("");
+        }
+
+        if (!("-1").equals(listaSeq.elemento(2))) {
+            t01.setVisible(true);
+            slot01.setVisible(true);
+            t01.setText(listaSeq.elemento(2));
+        } else {
+            t01.setVisible(false);
+            slot01.setVisible(false);
+            t01.setText("");
+        }
+
+        if (!("-1").equals(listaSeq.elemento(3))) {
+            t02.setVisible(true);
+            slot02.setVisible(true);
+            t02.setText(listaSeq.elemento(3));
+        } else {
+            t02.setVisible(false);
+            slot02.setVisible(false);
+            t02.setText("");
+        }
+
+        if (!("-1").equals(listaSeq.elemento(4))) {
+            t03.setVisible(true);
+            slot03.setVisible(true);
+            t03.setText(listaSeq.elemento(4));
+        } else {
+            t03.setVisible(false);
+            slot03.setVisible(false);
+            t03.setText("");
+        }
+
+        if (!("-1").equals(listaSeq.elemento(5))) {
+            t04.setVisible(true);
+            slot04.setVisible(true);
+            t04.setText(listaSeq.elemento(5));
+        } else {
+            t04.setVisible(false);
+            slot04.setVisible(false);
+            t04.setText("");
+        }
+
+        if (!("-1").equals(listaSeq.elemento(6))) {
+            t05.setVisible(true);
+            slot05.setVisible(true);
+            t05.setText(listaSeq.elemento(6));
+        } else {
+            t05.setVisible(false);
+            slot05.setVisible(false);
+            t05.setText("");
+        }
+
+        if (!("-1").equals(listaSeq.elemento(7))) {
+            t06.setVisible(true);
+            slot06.setVisible(true);
+            t06.setText(listaSeq.elemento(7));
+        } else {
+            t06.setVisible(false);
+            slot06.setVisible(false);
+            t06.setText("");
+        }
+
+        if (!("-1").equals(listaSeq.elemento(8))) {
+            t07.setVisible(true);
+            slot07.setVisible(true);
+            t07.setText(listaSeq.elemento(8));
+        } else {
+            t07.setVisible(false);
+            slot07.setVisible(false);
+            t07.setText("");
+        }
+
+        if (!("-1").equals(listaSeq.elemento(9))) {
+            t08.setVisible(true);
+            slot08.setVisible(true);
+            t08.setText(listaSeq.elemento(9));
+        } else {
+            t08.setVisible(false);
+            slot08.setVisible(false);
+            t08.setText("");
+        }
+
+        if (!("-1").equals(listaSeq.elemento(10))) {
+            t09.setVisible(true);
+            slot09.setVisible(true);
+            t09.setText(listaSeq.elemento(10));
+        } else {
+            t09.setVisible(false);
+            slot09.setVisible(false);
+            t09.setText("");
+        }
+
+        if (!("-1").equals(listaSeq.elemento(11))) {
+            t10.setVisible(true);
+            slot10.setVisible(true);
+            t10.setText(listaSeq.elemento(11));
+        } else {
+            t10.setVisible(false);
+            slot10.setVisible(false);
+            t10.setText("");
+        }
+
+        if (!("-1").equals(listaSeq.elemento(12))) {
+            t11.setVisible(true);
+            slot11.setVisible(true);
+            t11.setText(listaSeq.elemento(12));
+        } else {
+            t11.setVisible(false);
+            slot11.setVisible(false);
+            t11.setText("");
+        }
+
+        if (!("-1").equals(listaSeq.elemento(13))) {
+            t12.setVisible(true);
+            slot12.setVisible(true);
+            t12.setText(listaSeq.elemento(13));
+        } else {
+            t12.setVisible(false);
+            slot12.setVisible(false);
+            t12.setText("");
+        }
+
+        if (!("-1").equals(listaSeq.elemento(14))) {
+            t13.setVisible(true);
+            slot13.setVisible(true);
+            t13.setText(listaSeq.elemento(14));
+        } else {
+            t13.setVisible(false);
+            slot13.setVisible(false);
+            t13.setText("");
+        }
+
+        if (!("-1").equals(listaSeq.elemento(15))) {
+            t14.setVisible(true);
+            slot14.setVisible(true);
+            t14.setText(listaSeq.elemento(15));
+        } else {
+            t14.setVisible(false);
+            slot14.setVisible(false);
+            t14.setText("");
+        }
     }
 }

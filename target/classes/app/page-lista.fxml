@@ -104,6 +104,12 @@
                   <Font name="SansSerif" size="20.0" />
                </font>
             </Text>
+            <TextField fx:id="removed" editable="false" layoutX="652.0" layoutY="612.0" prefHeight="40.0" prefWidth="139.0" />
+            <Text fill="#4979e0" layoutX="657.0" layoutY="586.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Ultimo elemento removido:" wrappingWidth="128.533203125">
+               <font>
+                  <Font name="SansSerif Bold" size="12.0" />
+               </font>
+            </Text>
          </children>
       </AnchorPane>
       <AnchorPane prefHeight="720.0" prefWidth="250.0" style="-fx-background-color: #d9e5ff; -fx-border-color: dddddd;">
@@ -182,7 +188,7 @@
                   <Font name="SansSerif Bold" size="12.0" />
                </font>
             </Text>
-            <Button fx:id="btnSearch" layoutX="624.0" layoutY="26.0" mnemonicParsing="false" prefHeight="100.0" prefWidth="65.0" style="-fx-background-color: #4979e0;" text="Search" textFill="WHITE">
+            <Button fx:id="btnSearch" layoutX="624.0" layoutY="26.0" mnemonicParsing="false" onMouseClicked="#find" prefHeight="100.0" prefWidth="65.0" style="-fx-background-color: #4979e0;" text="Search" textFill="WHITE">
                <font>
                   <Font name="SansSerif Bold" size="12.0" />
                </font>
@@ -193,7 +199,7 @@
                   <Font name="SansSerif Bold" size="12.0" />
                </font>
             </Text>
-            <TextField id="posSearchResult" fx:id="resultBusca" layoutX="414.0" layoutY="97.0" prefHeight="30.0" prefWidth="80.0" />
+            <TextField fx:id="resultSeach" editable="false" layoutX="414.0" layoutY="97.0" prefHeight="30.0" prefWidth="80.0" />
             <Text fill="#4979e0" layoutX="415.0" layoutY="91.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Posição do elemento" wrappingWidth="208.533203125">
                <font>
                   <Font name="SansSerif Bold" size="12.0" />
@@ -204,7 +210,12 @@
                   <Font name="Microsoft Sans Serif" size="14.0" />
                </font>
             </Text>
-            <TextField fx:id="inputPosition" layoutX="13.0" layoutY="82.0" prefHeight="30.0" prefWidth="200.0" />
+            <TextField fx:id="inputPosition" layoutX="13.0" layoutY="105.0" prefHeight="30.0" prefWidth="200.0" />
+            <Text fill="#4979e0" layoutX="14.0" layoutY="83.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Digite a posição a ser inserido/removido:" wrappingWidth="208.533203125">
+               <font>
+                  <Font name="SansSerif Bold" size="12.0" />
+               </font>
+            </Text>
          </children>
       </AnchorPane>
          </children>

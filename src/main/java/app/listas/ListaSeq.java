@@ -59,13 +59,14 @@ public class ListaSeq {
      * Retorna -1 caso não seja encontrado
      */
     public int posicao(String valor) {
+        valor = valor.trim();
         /*
          * Procura elemento a elemento, se o dado está na
          * lista. Se estiver, retorna a sua posição no array+1
          */
         for (int i = 0; i < nElementos; i++) {
             if (dados[i].equals(valor)) {
-                return (i + 1);
+                return i + 1;
             }
         }
 

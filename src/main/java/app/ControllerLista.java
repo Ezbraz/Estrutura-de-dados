@@ -103,6 +103,7 @@ public class ControllerLista {
     private TextField resultSeach;
     @FXML
     private TextField removed;
+    // fim inputs
 
     // botões
     @FXML

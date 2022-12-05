@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1080.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="app.ControllerFila">
+   <children>
+      <AnchorPane layoutX="250.0" prefHeight="720.0" prefWidth="830.0">
+         <children>
+            <AnchorPane prefHeight="200.0" prefWidth="200.0" />
+            <Rectangle fx:id="slot00" arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="50.0" layoutX="38.0" layoutY="335.0" stroke="#4979e0" strokeType="INSIDE" strokeWidth="2.0" visible="false" width="50.0" />
+            <Rectangle fx:id="slot01" arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="50.0" layoutX="89.0" layoutY="335.0" stroke="#4979e0" strokeType="INSIDE" strokeWidth="2.0" visible="false" width="50.0" />
+            <Rectangle fx:id="slot02" arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="50.0" layoutX="140.0" layoutY="335.0" stroke="#4979e0" strokeType="INSIDE" strokeWidth="2.0" visible="false" width="50.0" />
+            <Rectangle fx:id="slot03" arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="50.0" layoutX="191.0" layoutY="335.0" stroke="#4979e0" strokeType="INSIDE" strokeWidth="2.0" visible="false" width="50.0" />
+            <Rectangle fx:id="slot04" arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="50.0" layoutX="242.0" layoutY="335.0" stroke="#4979e0" strokeType="INSIDE" strokeWidth="2.0" visible="false" width="50.0" />
+            <Rectangle fx:id="slot05" arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="50.0" layoutX="293.0" layoutY="335.0" stroke="#4979e0" strokeType="INSIDE" strokeWidth="2.0" visible="false" width="50.0" />
+            <Rectangle fx:id="slot06" arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="50.0" layoutX="344.0" layoutY="335.0" stroke="#4979e0" strokeType="INSIDE" strokeWidth="2.0" visible="false" width="50.0" />
+            <Rectangle fx:id="slot07" arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="50.0" layoutX="395.0" layoutY="335.0" stroke="#4979e0" strokeType="INSIDE" strokeWidth="2.0" visible="false" width="50.0" />
+            <Rectangle fx:id="slot08" arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="50.0" layoutX="446.0" layoutY="335.0" stroke="#4979e0" strokeType="INSIDE" strokeWidth="2.0" visible="false" width="50.0" />
+            <Rectangle fx:id="slot09" arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="50.0" layoutX="497.0" layoutY="335.0" stroke="#4979e0" strokeType="INSIDE" strokeWidth="2.0" visible="false" width="50.0" />
+            <Rectangle fx:id="slot10" arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="50.0" layoutX="548.0" layoutY="335.0" stroke="#4979e0" strokeType="INSIDE" strokeWidth="2.0" visible="false" width="50.0" />
+            <Rectangle fx:id="slot11" arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="50.0" layoutX="599.0" layoutY="335.0" stroke="#4979e0" strokeType="INSIDE" strokeWidth="2.0" visible="false" width="50.0" />
+            <Rectangle fx:id="slot12" arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="50.0" layoutX="650.0" layoutY="335.0" stroke="#4979e0" strokeType="INSIDE" strokeWidth="2.0" visible="false" width="50.0" />
+            <Rectangle fx:id="slot13" arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="50.0" layoutX="701.0" layoutY="335.0" stroke="#4979e0" strokeType="INSIDE" strokeWidth="2.0" visible="false" width="50.0" />
+            <Rectangle fx:id="slot14" arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="50.0" layoutX="752.0" layoutY="335.0" stroke="#4979e0" strokeType="INSIDE" strokeWidth="2.0" visible="false" width="50.0" />
+            <Text fx:id="t00" layoutX="38.0" layoutY="366.0" strokeType="OUTSIDE" strokeWidth="0.0" text="A" textAlignment="CENTER" visible="false" wrappingWidth="50.0">
+               <font>
+                  <Font name="SansSerif" size="20.0" />
+               </font>
+            </Text>
+            <Text fx:id="t01" layoutX="89.0" layoutY="367.0" strokeType="OUTSIDE" strokeWidth="0.0" text="A" textAlignment="CENTER" visible="false" wrappingWidth="50.0">
+               <font>
+                  <Font name="SansSerif" size="20.0" />
+               </font>
+            </Text>
+            <Text fx:id="t02" layoutX="140.0" layoutY="367.0" strokeType="OUTSIDE" strokeWidth="0.0" text="A" textAlignment="CENTER" visible="false" wrappingWidth="50.0">
+               <font>
+                  <Font name="SansSerif" size="20.0" />
+               </font>
+            </Text>
+            <Text fx:id="t03" layoutX="191.0" layoutY="367.0" strokeType="OUTSIDE" strokeWidth="0.0" text="A" textAlignment="CENTER" visible="false" wrappingWidth="50.0">
+               <font>
+                  <Font name="SansSerif" size="20.0" />
+               </font>
+            </Text>
+            <Text fx:id="t04" layoutX="242.0" layoutY="366.0" strokeType="OUTSIDE" strokeWidth="0.0" text="A" textAlignment="CENTER" visible="false" wrappingWidth="50.0">
+               <font>
+                  <Font name="SansSerif" size="20.0" />
+               </font>
+            </Text>
+            <Text fx:id="t05" layoutX="293.0" layoutY="366.0" strokeType="OUTSIDE" strokeWidth="0.0" text="A" textAlignment="CENTER" visible="false" wrappingWidth="50.0">
+               <font>
+                  <Font name="SansSerif" size="20.0" />
+               </font>
+            </Text>
+            <Text fx:id="t06" layoutX="344.0" layoutY="367.0" strokeType="OUTSIDE" strokeWidth="0.0" text="A" textAlignment="CENTER" visible="false" wrappingWidth="50.0">
+               <font>
+                  <Font name="SansSerif" size="20.0" />
+               </font>
+            </Text>
+            <Text fx:id="t07" layoutX="395.0" layoutY="366.0" strokeType="OUTSIDE" strokeWidth="0.0" text="A" textAlignment="CENTER" visible="false" wrappingWidth="50.0">
+               <font>
+                  <Font name="SansSerif" size="20.0" />
+               </font>
+            </Text>
+            <Text fx:id="t08" layoutX="446.0" layoutY="366.0" strokeType="OUTSIDE" strokeWidth="0.0" text="A" textAlignment="CENTER" visible="false" wrappingWidth="50.0">
+               <font>
+                  <Font name="SansSerif" size="20.0" />
+               </font>
+            </Text>
+            <Text fx:id="t09" layoutX="497.0" layoutY="366.0" strokeType="OUTSIDE" strokeWidth="0.0" text="A" textAlignment="CENTER" visible="false" wrappingWidth="50.0">
+               <font>
+                  <Font name="SansSerif" size="20.0" />
+               </font>
+            </Text>
+            <Text fx:id="t10" layoutX="548.0" layoutY="366.0" strokeType="OUTSIDE" strokeWidth="0.0" text="A" textAlignment="CENTER" visible="false" wrappingWidth="50.0">
+               <font>
+                  <Font name="SansSerif" size="20.0" />
+               </font>
+            </Text>
+            <Text fx:id="t11" layoutX="599.0" layoutY="367.0" strokeType="OUTSIDE" strokeWidth="0.0" text="A" textAlignment="CENTER" visible="false" wrappingWidth="50.0">
+               <font>
+                  <Font name="SansSerif" size="20.0" />
+               </font>
+            </Text>
+            <Text fx:id="t12" layoutX="650.0" layoutY="366.0" strokeType="OUTSIDE" strokeWidth="0.0" text="A" textAlignment="CENTER" visible="false" wrappingWidth="50.0">
+               <font>
+                  <Font name="SansSerif" size="20.0" />
+               </font>
+            </Text>
+            <Text fx:id="t13" layoutX="701.0" layoutY="367.0" strokeType="OUTSIDE" strokeWidth="0.0" text="A" textAlignment="CENTER" visible="false" wrappingWidth="50.0">
+               <font>
+                  <Font name="SansSerif" size="20.0" />
+               </font>
+            </Text>
+            <Text fx:id="t14" layoutX="752.0" layoutY="366.0" strokeType="OUTSIDE" strokeWidth="0.0" text="A" textAlignment="CENTER" visible="false" wrappingWidth="50.0">
+               <font>
+                  <Font name="SansSerif" size="20.0" />
+               </font>
+            </Text>
+            <AnchorPane prefHeight="150.0" prefWidth="830.0" style="-fx-background-color: #f4f4f4;">
+               <children>
+                  <ImageView fx:id="icon" fitHeight="100.0" fitWidth="200.0" layoutX="716.0" layoutY="25.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@assets/users.png" />
+                     </image>
+                  </ImageView>
+                  <Button fx:id="remove" layoutX="317.0" layoutY="26.0" mnemonicParsing="false" onMouseClicked="#remove" prefHeight="100.0" prefWidth="65.0" style="-fx-background-color: #4979e0;" text="Remove" textFill="WHITE">
+                     <font>
+                        <Font name="SansSerif Bold" size="12.0" />
+                     </font>
+                  </Button>
+                  <TextField fx:id="textoInsert" layoutX="13.0" layoutY="40.0" prefHeight="30.0" prefWidth="200.0" />
+                  <Button fx:id="submit" layoutX="244.0" layoutY="25.0" mnemonicParsing="false" onMouseClicked="#insert" prefHeight="100.0" prefWidth="65.0" style="-fx-background-color: #4979e0;" text="Insert" textFill="WHITE">
+                     <font>
+                        <Font name="SansSerif Bold" size="12.0" />
+                     </font>
+                  </Button>
+                  <Text fill="#4979e0" layoutX="14.0" layoutY="33.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Digite o elemento a ser inserido." wrappingWidth="208.533203125">
+                     <font>
+                        <Font name="SansSerif Bold" size="12.0" />
+                     </font>
+                  </Text>
+                  <Button fx:id="search" layoutX="624.0" layoutY="26.0" mnemonicParsing="false" onMouseClicked="#Busca" prefHeight="100.0" prefWidth="65.0" style="-fx-background-color: #4979e0;" text="Search" textFill="WHITE">
+                     <font>
+                        <Font name="SansSerif Bold" size="12.0" />
+                     </font>
+                  </Button>
+                  <TextField fx:id="textoInsertbusca" layoutX="412.0" layoutY="40.0" prefHeight="30.0" prefWidth="193.0" />
+                  <Text fill="#4979e0" layoutX="411.0" layoutY="33.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Digite o elemento a ser encontrado" wrappingWidth="208.533203125">
+                     <font>
+                        <Font name="SansSerif Bold" size="12.0" />
+                     </font>
+                  </Text>
+                  <TextField fx:id="resultBusca" layoutX="414.0" layoutY="97.0" prefHeight="30.0" prefWidth="80.0" />
+                  <Text fill="#4979e0" layoutX="415.0" layoutY="91.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Posição do elemento" wrappingWidth="208.533203125">
+                     <font>
+                        <Font name="SansSerif Bold" size="12.0" />
+                     </font>
+                  </Text>
+                  <Text fx:id="posicao" layoutX="428.0" layoutY="117.0" strokeType="OUTSIDE" strokeWidth="0.0" text="01" visible="false">
+                     <font>
+                        <Font name="Microsoft Sans Serif" size="14.0" />
+                     </font>
+                  </Text>
+               </children>
+            </AnchorPane>
+         </children></AnchorPane>
+      <AnchorPane prefHeight="720.0" prefWidth="250.0" style="-fx-background-color: #d9e5ff; -fx-border-color: dddddd;">
+         <children>
+            <Button fx:id="btnList" layoutX="25.0" layoutY="230.0" mnemonicParsing="false" onMouseClicked="#GoToLista" prefHeight="40.0" prefWidth="200.0" style="-fx-border-radius: 5px; -fx-background-color: #9fbdff;" text="Lista" textFill="WHITE">
+               <font>
+                  <Font name="SansSerif Bold" size="14.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Button fx:id="btnListEnc" layoutX="25.0" layoutY="285.0" mnemonicParsing="false" onMouseClicked="#GoToListaEncadeada" prefHeight="40.0" prefWidth="200.0" style="-fx-border-radius: 5px; -fx-background-color: #9fbdff;" text="Listas Encadeada" textFill="WHITE">
+               <font>
+                  <Font name="SansSerif Bold" size="14.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Button fx:id="btnPile" layoutX="25.0" layoutY="340.0" mnemonicParsing="false" onMouseClicked="#GoToPilha" prefHeight="40.0" prefWidth="200.0" style="-fx-border-radius: 5px; -fx-background-color: #9fbdff;" text="Pilha" textFill="WHITE">
+               <font>
+                  <Font name="SansSerif Bold" size="14.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Button fx:id="btnQueue" layoutX="25.0" layoutY="395.0" mnemonicParsing="false" onMouseClicked="#GoToFila" prefHeight="40.0" prefWidth="200.0" style="-fx-border-radius: 5px; -fx-background-color: #4979e0;" text="Fila" textFill="WHITE">
+               <font>
+                  <Font name="SansSerif Bold" size="14.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Button fx:id="btnTree" layoutX="25.0" layoutY="450.0" mnemonicParsing="false" onMouseClicked="#GoToArvore" prefHeight="40.0" prefWidth="200.0" style="-fx-border-radius: 5px; -fx-background-color: #9fbdff;" text="árvore Binária" textFill="WHITE">
+               <font>
+                  <Font name="SansSerif Bold" size="14.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Button fx:id="btnList1" layoutX="25.0" layoutY="666.0" mnemonicParsing="false" onMouseClicked="#GoToHome" prefHeight="30.0" prefWidth="200.0" style="-fx-border-radius: 5px; -fx-background-color: #9fbdff;" text="Sair" textFill="WHITE">
+               <font>
+                  <Font name="SansSerif" size="14.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+         </children>
+      </AnchorPane>
+      <Text fill="#9c9c9c" layoutX="467.0" layoutY="702.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Projeto desenvolvido para a disciplina de Estrutura de Dados - UFPB - 2022" />
+         </children>
+</AnchorPane>

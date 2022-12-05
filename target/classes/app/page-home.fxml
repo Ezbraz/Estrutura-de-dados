@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1080.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="app.ControllerHome">
+   <children>
+      <AnchorPane layoutX="250.0" prefHeight="720.0" prefWidth="830.0">
+         <children>
+            <ImageView fitHeight="534.0" fitWidth="846.0" layoutX="148.0" layoutY="93.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@assets/background.gif" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+      <AnchorPane prefHeight="720.0" prefWidth="250.0" style="-fx-background-color: #d9e5ff; -fx-border-color: dddddd;">
+         <children>
+            <Button fx:id="btnList" layoutX="25.0" layoutY="230.0" mnemonicParsing="false" onMouseClicked="#GoToLista" prefHeight="40.0" prefWidth="200.0" style="-fx-border-radius: 5px; -fx-background-color: #4979e0;" text="Lista" textFill="WHITE">
+               <font>
+                  <Font name="SansSerif Bold" size="14.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Button fx:id="btnListEnc" layoutX="25.0" layoutY="285.0" mnemonicParsing="false" onMouseClicked="#GoToListaEncadeada" prefHeight="40.0" prefWidth="200.0" style="-fx-border-radius: 5px; -fx-background-color: #4979e0;" text="Listas Encadeada" textFill="WHITE">
+               <font>
+                  <Font name="SansSerif Bold" size="14.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Button fx:id="btnPile" layoutX="25.0" layoutY="340.0" mnemonicParsing="false" onMouseClicked="#GoToPilha" prefHeight="40.0" prefWidth="200.0" style="-fx-border-radius: 5px; -fx-background-color: #4979e0;" text="Pilha" textFill="WHITE">
+               <font>
+                  <Font name="SansSerif Bold" size="14.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Button fx:id="btnQueue" layoutX="25.0" layoutY="395.0" mnemonicParsing="false" onMouseClicked="#GoToFila" prefHeight="40.0" prefWidth="200.0" style="-fx-border-radius: 5px; -fx-background-color: #4979e0;" text="Fila" textFill="WHITE">
+               <font>
+                  <Font name="SansSerif Bold" size="14.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Button fx:id="btnTree" layoutX="25.0" layoutY="450.0" mnemonicParsing="false" onMouseClicked="#GoToArvore" prefHeight="40.0" prefWidth="200.0" style="-fx-border-radius: 5px; -fx-background-color: #4979e0;" text="árvore Binária" textFill="WHITE">
+               <font>
+                  <Font name="SansSerif Bold" size="14.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Button fx:id="btnList1" layoutX="25.0" layoutY="666.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="200.0" style="-fx-border-radius: 5px; -fx-background-color: #4979e0;" text="Sair" textFill="WHITE">
+               <font>
+                  <Font name="SansSerif" size="14.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+         </children>
+      </AnchorPane>
+      <Text fill="#9c9c9c" layoutX="467.0" layoutY="702.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Projeto desenvolvido para a disciplina de Estrutura de Dados - UFPB - 2022" />
+         </children>
+</AnchorPane>

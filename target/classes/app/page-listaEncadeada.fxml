@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1080.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="app.ControllerListaEncadeada">
+   <children>
+      <AnchorPane layoutX="250.0" prefHeight="720.0" prefWidth="830.0">
+         <children>
+            <TextField fx:id="inputPilha" layoutX="99.0" layoutY="64.0" />
+            <Circle fx:id="circle0" fill="DODGERBLUE" layoutX="129.0" layoutY="347.0" radius="45.0" stroke="BLACK" strokeType="INSIDE" />
+            <Circle fx:id="circle01" fill="DODGERBLUE" layoutX="237.0" layoutY="347.0" radius="45.0" stroke="BLACK" strokeType="INSIDE" />
+            <Circle fx:id="circle011" fill="DODGERBLUE" layoutX="353.0" layoutY="347.0" radius="45.0" stroke="BLACK" strokeType="INSIDE" />
+            <Circle fx:id="circle0111" fill="DODGERBLUE" layoutX="466.0" layoutY="347.0" radius="45.0" stroke="BLACK" strokeType="INSIDE" />
+            <Circle fx:id="circle01111" fill="DODGERBLUE" layoutX="580.0" layoutY="347.0" radius="45.0" stroke="BLACK" strokeType="INSIDE" />
+            <Text fx:id="num1" layoutX="118.0" layoutY="354.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+         </children></AnchorPane>
+      <AnchorPane prefHeight="720.0" prefWidth="250.0" style="-fx-background-color: #d9e5ff; -fx-border-color: dddddd;">
+         <children>
+            <Button fx:id="btnList" layoutX="25.0" layoutY="230.0" mnemonicParsing="false" onMouseClicked="#GoToLista" prefHeight="40.0" prefWidth="200.0" style="-fx-border-radius: 5px; -fx-background-color: #9fbdff;" text="Lista" textFill="WHITE">
+               <font>
+                  <Font name="SansSerif Bold" size="14.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Button fx:id="btnListEnc" layoutX="25.0" layoutY="285.0" mnemonicParsing="false" onMouseClicked="#GoToListaEncadeada" prefHeight="40.0" prefWidth="200.0" style="-fx-border-radius: 5px; -fx-background-color: #4979e0;" text="Listas Encadeada" textFill="WHITE">
+               <font>
+                  <Font name="SansSerif Bold" size="14.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Button fx:id="btnPile" layoutX="25.0" layoutY="340.0" mnemonicParsing="false" onMouseClicked="#GoToPilha" prefHeight="40.0" prefWidth="200.0" style="-fx-border-radius: 5px; -fx-background-color: #9fbdff;" text="Pilha" textFill="WHITE">
+               <font>
+                  <Font name="SansSerif Bold" size="14.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Button fx:id="btnQueue" layoutX="25.0" layoutY="395.0" mnemonicParsing="false" onMouseClicked="#GoToFila" prefHeight="40.0" prefWidth="200.0" style="-fx-border-radius: 5px; -fx-background-color: #9fbdff;" text="Fila" textFill="WHITE">
+               <font>
+                  <Font name="SansSerif Bold" size="14.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Button fx:id="btnTree" layoutX="25.0" layoutY="450.0" mnemonicParsing="false" onMouseClicked="#GoToArvore" prefHeight="40.0" prefWidth="200.0" style="-fx-border-radius: 5px; -fx-background-color: #9fbdff;" text="árvore Binária" textFill="WHITE">
+               <font>
+                  <Font name="SansSerif Bold" size="14.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Button fx:id="btnList1" layoutX="25.0" layoutY="666.0" mnemonicParsing="false" onMouseClicked="#GoToHome" prefHeight="30.0" prefWidth="200.0" style="-fx-border-radius: 5px; -fx-background-color: #9fbdff;" text="Sair" textFill="WHITE">
+               <font>
+                  <Font name="SansSerif" size="14.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+         </children>
+      </AnchorPane>
+      <Text fill="#9c9c9c" layoutX="467.0" layoutY="702.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Projeto desenvolvido para a disciplina de Estrutura de Dados - UFPB - 2022" />
+         </children>
+</AnchorPane>

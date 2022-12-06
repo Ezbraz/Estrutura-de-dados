@@ -15,7 +15,6 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 
-import app.listas.ListaSeq;
 import app.listas.encadeada.LSE;
 
 public class ControllerListaEncadeada {
@@ -230,7 +229,7 @@ public class ControllerListaEncadeada {
             String element = inputElement.getText().trim();
             if (element.length() == 0) {
                 throw new IllegalArgumentException();
-            } else if (position < 1 || position > (listaEncadeada.tamanho() + 1)) {
+            } else if (position < 1 || listaEncadeada.tamanho() > 0 && position > (listaEncadeada.tamanho() + 1)) {
                 throw new NullPointerException();
             }
 
@@ -278,6 +277,8 @@ public class ControllerListaEncadeada {
 
             System.out.println("Tamanho:" + listaEncadeada.tamanho());
             render();
+
+            // limpando os inputs
             inputElement.setText("");
             inputPosition.setText("");
         } catch (NullPointerException e) {
@@ -292,8 +293,8 @@ public class ControllerListaEncadeada {
     private void find() {
         try {
             System.out.println("Pesquisando...");
-
             String procurado = inputSearch.getText().trim();
+
             if (procurado.length() == 0) {
                 throw new IllegalArgumentException();
             }
@@ -308,9 +309,11 @@ public class ControllerListaEncadeada {
                 resultSeach.setText("Null");
             }
 
-            inputSearch.setText("");
         } catch (NullPointerException e) {
-            msgErrorAlert("Lista Vazia.", "Lista vazia, um elemento deve ser inserido para poder ser removido.");
+            msgErrorAlert("Lista Vazia.", "Lista vazia, um elemento deve ser inserido para poder ser pesquisado.");
+            // limpando input
+            inputSearch.setText("");
+            resultSeach.setText("");
         } catch (Exception e) {
             inputErrorAlert();
             System.out.println("Campo vazio ou caractere invalido.");
@@ -529,6 +532,7 @@ public class ControllerListaEncadeada {
         }
     }
 
+    // alertas
     private void msgErrorAlert(String title, String textContent) {
         Alert alert = new Alert(AlertType.ERROR);
         alert.setTitle("Aviso!");

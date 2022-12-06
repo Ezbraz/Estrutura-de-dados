@@ -2,10 +2,13 @@ package app;
 
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.scene.control.Alert;
+import javafx.scene.control.Alert.AlertType;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
 import javafx.scene.input.MouseEvent;
+import javafx.scene.shape.Line;
 import javafx.scene.shape.Rectangle;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
@@ -187,59 +190,141 @@ public class ControllerLista {
     private Text t14;
     @FXML
     private Rectangle slot14;
+
+    @FXML
+    private Line link1_2;
+    @FXML
+    private Line link2_3;
+    @FXML
+    private Line link3_4;
+    @FXML
+    private Line link4_5;
+    @FXML
+    private Line link5_6;
+    @FXML
+    private Line link6_7;
+    @FXML
+    private Line link7_8;
+    @FXML
+    private Line link8_9;
+    @FXML
+    private Line link9_10;
+    @FXML
+    private Line link10_11;
+    @FXML
+    private Line link11_12;
+    @FXML
+    private Line link12_13;
+    @FXML
+    private Line link13_14;
+    @FXML
+    private Line link14_15;
     // fim conteudo
 
     @FXML
     private void insert() {
         System.out.println("Inserindo");
 
-        int position = Integer.parseInt(inputPosition.getText());
-        String element = inputElement.getText();
+        try {
+            int position = Integer.parseInt(inputPosition.getText().trim());
+            String element = inputElement.getText().trim();
+            if (element.length() == 0) {
+                throw new IllegalArgumentException();
+            } else if (position < 1 || listaSeq.tamanho() > 0 && position > (listaSeq.tamanho() + 1)) {
+                System.out.println("dkansdansdjo");
+                throw new NullPointerException();
+            }
 
-        if (!listaSeq.insere(position, element)) {
-            System.out.println("Error");
+            if (listaSeq.tamanho() < 15) {
+                if (!listaSeq.insere(position, element)) {
+                    System.out.println("Error");
+                }
+            } else {
+                throw new IndexOutOfBoundsException();
+            }
+
+            System.out.println("Tamanho:" + listaSeq.tamanho());
+            render();
+            // limpando os inputs
+            inputElement.setText("");
+            inputPosition.setText("");
+        } catch (NullPointerException e) {
+            System.out.println("Erro real: " + e.getMessage());
+            msgErrorAlert("Posição inserida foi inválida.", "Por favor insira uma posição válida.");
+        } catch (IndexOutOfBoundsException e) {
+            msgErrorAlert("Lista \"Cheia\"!", "Para inserir algo novo na lista algum item deve ser removido.");
+        } catch (Exception e) {
+            inputErrorAlert();
+            System.out.println("Campo vazio ou caractere invalido.");
         }
-
-        System.out.println("Tamanho:" + listaSeq.tamanho());
-
-        render();
     }
 
     @FXML
     private void remove() {
         System.out.println("Removendo");
 
-        int position = Integer.parseInt(inputPosition.getText());
+        try {
+            if (listaSeq.tamanho() == 0) {
+                throw new NullPointerException();
+            }
+            int position = Integer.parseInt(inputPosition.getText().trim());
+            String removido = listaSeq.remove(position).trim();
 
-        String removido = listaSeq.remove(position);
+            if ("".equals(removido)) {
+                msgErrorAlert("Posição invalida.", "Insira uma posição válida.");
+            } else {
+                removed.setText(removido);
+                System.out.println("Elemento removido: " + removido);
+            }
 
-        if (removido.equals("-1")) {
-            System.out.println("Error");
-        } else {
-            removed.setText(removido);
-            System.out.println("Elemento removido: " + removido);
+            System.out.println("Tamanho:" + listaSeq.tamanho());
+            render();
+
+            // limpando os inputs
+            inputElement.setText("");
+            inputPosition.setText("");
+        } catch (NullPointerException e) {
+            msgErrorAlert("Lista Vazia.", "Lista vazia, um elemento deve ser inserido para poder ser removido.");
+        } catch (Exception e) {
+            inputErrorAlert();
+            System.out.println("Campo vazio ou caractere invalido.");
         }
-
-        System.out.println("Tamanho:" + listaSeq.tamanho());
-        render();
     }
 
     @FXML
     private void find() {
-        System.out.println("Procurando");
-        String procurado = inputSearch.getText();
+        try {
+            System.out.println("Procurando");
+            String procurado = inputSearch.getText().trim();
 
-        int result = listaSeq.posicao(procurado);
-        if (result > 0) {
-            resultSeach.setText(Integer.toString(result));
-        } else {
-            resultSeach.setText("Null");
+            if (procurado.length() == 0) {
+                throw new IllegalArgumentException();
+            }
+            if (listaSeq.tamanho() == 0) {
+                throw new NullPointerException();
+            }
+
+            int result = listaSeq.posicao(procurado);
+            if (result > 0) {
+                resultSeach.setText(Integer.toString(result));
+            } else {
+                resultSeach.setText("Null");
+            }
+
+        } catch (NullPointerException e) {
+            msgErrorAlert("Lista Vazia.", "Lista vazia, um elemento deve ser inserido para poder ser pesquisado.");
+            // limpando input
+            inputSearch.setText("");
+            resultSeach.setText("");
+        } catch (Exception e) {
+            inputErrorAlert();
+            System.out.println("Campo vazio ou caractere invalido.");
         }
     }
 
     // render
     public void render() {
-        if (!("-1").equals(listaSeq.elemento(1))) {
+        if (!("").equals(listaSeq.elemento(1))) {
             t00.setVisible(true);
             slot00.setVisible(true);
             t00.setText(listaSeq.elemento(1));
@@ -249,59 +334,81 @@ public class ControllerLista {
             t00.setText("");
         }
 
-        if (!("-1").equals(listaSeq.elemento(2))) {
+        if (!("").equals(listaSeq.elemento(2))) {
             t01.setVisible(true);
             slot01.setVisible(true);
+            link1_2.setVisible(true);
+
             t01.setText(listaSeq.elemento(2));
         } else {
             t01.setVisible(false);
             slot01.setVisible(false);
+            link1_2.setVisible(false);
+
             t01.setText("");
         }
 
-        if (!("-1").equals(listaSeq.elemento(3))) {
+        if (!("").equals(listaSeq.elemento(3))) {
             t02.setVisible(true);
             slot02.setVisible(true);
+            link2_3.setVisible(true);
+
             t02.setText(listaSeq.elemento(3));
         } else {
             t02.setVisible(false);
             slot02.setVisible(false);
+            link2_3.setVisible(false);
+
             t02.setText("");
         }
 
-        if (!("-1").equals(listaSeq.elemento(4))) {
+        if (!("").equals(listaSeq.elemento(4))) {
             t03.setVisible(true);
             slot03.setVisible(true);
+            link3_4.setVisible(true);
+
             t03.setText(listaSeq.elemento(4));
         } else {
             t03.setVisible(false);
             slot03.setVisible(false);
+            link3_4.setVisible(false);
+
             t03.setText("");
         }
 
-        if (!("-1").equals(listaSeq.elemento(5))) {
+        if (!("").equals(listaSeq.elemento(5))) {
             t04.setVisible(true);
             slot04.setVisible(true);
+            link4_5.setVisible(true);
+
             t04.setText(listaSeq.elemento(5));
         } else {
             t04.setVisible(false);
             slot04.setVisible(false);
+            link4_5.setVisible(false);
+
             t04.setText("");
         }
 
-        if (!("-1").equals(listaSeq.elemento(6))) {
+        if (!("").equals(listaSeq.elemento(6))) {
             t05.setVisible(true);
             slot05.setVisible(true);
+            link5_6.setVisible(true);
+
             t05.setText(listaSeq.elemento(6));
         } else {
             t05.setVisible(false);
             slot05.setVisible(false);
+            link5_6.setVisible(false);
+
             t05.setText("");
         }
 
-        if (!("-1").equals(listaSeq.elemento(7))) {
+        if (!("").equals(listaSeq.elemento(7))) {
             t06.setVisible(true);
             slot06.setVisible(true);
+            link6_7.setVisible(true);
+
             t06.setText(listaSeq.elemento(7));
         } else {
             t06.setVisible(false);
@@ -309,84 +416,134 @@ public class ControllerLista {
             t06.setText("");
         }
 
-        if (!("-1").equals(listaSeq.elemento(8))) {
+        if (!("").equals(listaSeq.elemento(8))) {
             t07.setVisible(true);
             slot07.setVisible(true);
+            link7_8.setVisible(true);
+            link6_7.setVisible(false);
+
             t07.setText(listaSeq.elemento(8));
         } else {
             t07.setVisible(false);
             slot07.setVisible(false);
+            link7_8.setVisible(false);
+
             t07.setText("");
         }
 
-        if (!("-1").equals(listaSeq.elemento(9))) {
+        if (!("").equals(listaSeq.elemento(9))) {
             t08.setVisible(true);
             slot08.setVisible(true);
+            link8_9.setVisible(true);
+
             t08.setText(listaSeq.elemento(9));
         } else {
             t08.setVisible(false);
             slot08.setVisible(false);
+            link8_9.setVisible(false);
+
             t08.setText("");
         }
 
-        if (!("-1").equals(listaSeq.elemento(10))) {
+        if (!("").equals(listaSeq.elemento(10))) {
             t09.setVisible(true);
             slot09.setVisible(true);
+            link9_10.setVisible(true);
+
             t09.setText(listaSeq.elemento(10));
         } else {
             t09.setVisible(false);
             slot09.setVisible(false);
+            link9_10.setVisible(false);
+
             t09.setText("");
         }
 
-        if (!("-1").equals(listaSeq.elemento(11))) {
+        if (!("").equals(listaSeq.elemento(11))) {
             t10.setVisible(true);
             slot10.setVisible(true);
+            link10_11.setVisible(true);
+
             t10.setText(listaSeq.elemento(11));
         } else {
             t10.setVisible(false);
             slot10.setVisible(false);
+            link10_11.setVisible(false);
+
             t10.setText("");
         }
 
-        if (!("-1").equals(listaSeq.elemento(12))) {
+        if (!("").equals(listaSeq.elemento(12))) {
             t11.setVisible(true);
             slot11.setVisible(true);
+            link11_12.setVisible(true);
+
             t11.setText(listaSeq.elemento(12));
         } else {
             t11.setVisible(false);
             slot11.setVisible(false);
+            link11_12.setVisible(false);
+
             t11.setText("");
         }
 
-        if (!("-1").equals(listaSeq.elemento(13))) {
+        if (!("").equals(listaSeq.elemento(13))) {
             t12.setVisible(true);
             slot12.setVisible(true);
+            link12_13.setVisible(true);
+
             t12.setText(listaSeq.elemento(13));
         } else {
             t12.setVisible(false);
             slot12.setVisible(false);
+            link12_13.setVisible(false);
+
             t12.setText("");
         }
 
-        if (!("-1").equals(listaSeq.elemento(14))) {
+        if (!("").equals(listaSeq.elemento(14))) {
             t13.setVisible(true);
             slot13.setVisible(true);
+            link13_14.setVisible(true);
+
             t13.setText(listaSeq.elemento(14));
         } else {
             t13.setVisible(false);
             slot13.setVisible(false);
+            link13_14.setVisible(false);
+
             t13.setText("");
         }
 
-        if (!("-1").equals(listaSeq.elemento(15))) {
+        if (!("").equals(listaSeq.elemento(15))) {
             t14.setVisible(true);
             slot14.setVisible(true);
+            link14_15.setVisible(true);
+
             t14.setText(listaSeq.elemento(15));
         } else {
             t14.setVisible(false);
             slot14.setVisible(false);
+            link14_15.setVisible(false);
+
             t14.setText("");
         }
+    }
+
+    // alertas
+    private void msgErrorAlert(String title, String textContent) {
+        Alert alert = new Alert(AlertType.ERROR);
+        alert.setTitle("Aviso!");
+        alert.setHeaderText(title);
+        alert.setContentText(textContent);
+        alert.showAndWait();
+    }
+
+    private void inputErrorAlert() {
+        Alert alert = new Alert(AlertType.ERROR);
+        alert.setTitle("Aviso!");
+        alert.setHeaderText("Campo vazio ou caractere invalido.");
+        alert.setContentText("Verifique os campos inseridos.");
+        alert.showAndWait();
     }
 }

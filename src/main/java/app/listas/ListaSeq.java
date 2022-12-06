@@ -7,11 +7,6 @@ public class ListaSeq {
     private String dados[]; // Vetor que contém os dados da lista
     private int nElementos;
 
-    public ListaSeq() {
-        nElementos = 0;
-        dados = new String[100];
-    }
-
     public ListaSeq(int tamMax) {
         nElementos = 0;
         dados = new String[tamMax];
@@ -19,18 +14,16 @@ public class ListaSeq {
 
     /** Verifica se a Lista está vazia */
     public boolean vazia() {
-        if (nElementos == 0)
+        if (nElementos == 0) {
             return true;
-        else
+        } else {
             return false;
+        }
     }
 
     /** Verifica se a Lista está cheia */
     public boolean cheia() {
-        if (nElementos == dados.length)
-            return true;
-        else
-            return false;
+        return nElementos == dados.length;
     }
 
     /** Obtém o tamanho da Lista */
@@ -43,13 +36,13 @@ public class ListaSeq {
      * Retorna -1 se a posição for inválida.
      */
     public String elemento(int pos) {
-
         /*
          * Se posição estiver fora dos limites <= 0
          * ou > tamanho da lista
          */
-        if ((pos > nElementos) || (pos <= 0))
-            return "-1";
+        if (pos > nElementos || pos <= 0) {
+            return "";
+        }
 
         return dados[pos - 1];
     }
@@ -84,7 +77,7 @@ public class ListaSeq {
          */
         for (int i = desloc; i < nElementos; i++) {
             if (dados[i].equals(valor)) {
-                return (i + 1);
+                return i + 1;
             }
         }
         return -1;
@@ -100,7 +93,7 @@ public class ListaSeq {
          * Verifica se a lista está cheia ou se a posicao a ser
          * inserida eh invalida (i.e., > tamanho da lista+1
          */
-        if (cheia() || (pos > nElementos + 1) || (pos <= 0)) {
+        if (cheia() || pos > (nElementos + 1) || pos <= 0) {
             return false;
         }
 
@@ -127,8 +120,8 @@ public class ListaSeq {
      */
     public String remove(int pos) {
         /* Verifica se a posicao eh valida */
-        if ((pos > nElementos) || (pos < 1)) {
-            return "-1";
+        if (pos > nElementos || pos < 1) {
+            return "";
         }
 
         /* Armazena o dado a ser removido na var "dado" */
@@ -148,7 +141,6 @@ public class ListaSeq {
     }
 
     public String printArr() {
-        String str = Arrays.toString(dados);
-        return str;
+        return Arrays.toString(dados);
     }
 }

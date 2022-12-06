@@ -87,9 +87,6 @@ public class ControllerFila {
     private Rectangle slot14;
 
     @FXML
-    private Button submit;
-
-    @FXML
     private Text t00;
 
     @FXML
@@ -146,7 +143,9 @@ public class ControllerFila {
     private TextField textoInsertbusca;
 
     @FXML
-    private Text posicao;
+    private TextField resultBusca;
+
+
 
 
     @FXML
@@ -159,10 +158,9 @@ public class ControllerFila {
         }
         String casa = String.valueOf(posicoes.get(0));
         if(!posicoes.isEmpty()) {
-            posicao.setText(casa);
-            posicao.setVisible(true);
+            resultBusca.setText(casa);
             posicoes.remove(0);
-        }else{ posicao.setVisible(false);}
+        }
     }
 
     @FXML

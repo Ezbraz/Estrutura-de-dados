@@ -2,14 +2,126 @@
 
 <?import javafx.scene.Cursor?>
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ButtonBar?>
+<?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1080.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="app.ControllerArvore">
    <children>
       <AnchorPane layoutX="250.0" prefHeight="720.0" prefWidth="830.0">
-      </AnchorPane>
+         <children>
+            <Rectangle fx:id="slot07" arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="50.0" layoutX="390.0" layoutY="284.0" stroke="#4979e0" strokeType="INSIDE" strokeWidth="2.0" width="50.0" />
+            <Text fx:id="t07" layoutX="390.0" layoutY="315.0" strokeType="OUTSIDE" strokeWidth="0.0" text="x" textAlignment="CENTER" wrappingWidth="50.0">
+               <font>
+                  <Font name="SansSerif" size="20.0" />
+               </font>
+            </Text>
+            <Rectangle fx:id="slot03" arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="50.0" layoutX="223.0" layoutY="398.0" stroke="#4979e0" strokeType="INSIDE" strokeWidth="2.0" width="50.0" />
+            <Text fx:id="t03" layoutX="223.0" layoutY="429.0" strokeType="OUTSIDE" strokeWidth="0.0" text="x" textAlignment="CENTER" wrappingWidth="50.0">
+               <font>
+                  <Font name="SansSerif" size="20.0" />
+               </font>
+            </Text>
+            <Rectangle fx:id="slot01" arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="50.0" layoutX="138.0" layoutY="463.0" stroke="#4979e0" strokeType="INSIDE" strokeWidth="2.0" width="50.0" />
+            <Text fx:id="t01" layoutX="138.0" layoutY="494.0" strokeType="OUTSIDE" strokeWidth="0.0" text="x" textAlignment="CENTER" wrappingWidth="50.0">
+               <font>
+                  <Font name="SansSerif" size="20.0" />
+               </font>
+            </Text>
+            <Rectangle fx:id="slot05" arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="50.0" layoutX="308.0" layoutY="463.0" stroke="#4979e0" strokeType="INSIDE" strokeWidth="2.0" width="50.0" />
+            <Text fx:id="t05" layoutX="308.0" layoutY="494.0" strokeType="OUTSIDE" strokeWidth="0.0" text="x" textAlignment="CENTER" wrappingWidth="50.0">
+               <font>
+                  <Font name="SansSerif" size="20.0" />
+               </font>
+            </Text>
+            <Rectangle fx:id="slot02" arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="50.0" layoutX="188.0" layoutY="527.0" stroke="#4979e0" strokeType="INSIDE" strokeWidth="2.0" width="50.0" />
+            <Text fx:id="t02" layoutX="188.0" layoutY="558.0" strokeType="OUTSIDE" strokeWidth="0.0" text="3" textAlignment="CENTER" wrappingWidth="50.0">
+               <font>
+                  <Font name="SansSerif" size="20.0" />
+               </font>
+            </Text>
+            <Rectangle fx:id="slot04" arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="50.0" layoutX="258.0" layoutY="527.0" stroke="#4979e0" strokeType="INSIDE" strokeWidth="2.0" width="50.0" />
+            <Text fx:id="t04" layoutX="258.0" layoutY="558.0" strokeType="OUTSIDE" strokeWidth="0.0" text="5" textAlignment="CENTER" wrappingWidth="50.0">
+               <font>
+                  <Font name="SansSerif" size="20.0" />
+               </font>
+            </Text>
+            <Rectangle fx:id="slot06" arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="50.0" layoutX="358.0" layoutY="527.0" stroke="#4979e0" strokeType="INSIDE" strokeWidth="2.0" width="50.0" />
+            <Text fx:id="t06" layoutX="358.0" layoutY="558.0" strokeType="OUTSIDE" strokeWidth="0.0" text="7" textAlignment="CENTER" wrappingWidth="50.0">
+               <font>
+                  <Font name="SansSerif" size="20.0" />
+               </font>
+            </Text>
+            <Rectangle fx:id="slot00" arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="50.0" layoutX="88.0" layoutY="527.0" stroke="#4979e0" strokeType="INSIDE" strokeWidth="2.0" width="50.0" />
+            <Text fx:id="t00" layoutX="88.0" layoutY="558.0" strokeType="OUTSIDE" strokeWidth="0.0" text="1" textAlignment="CENTER" wrappingWidth="50.0">
+               <font>
+                  <Font name="SansSerif" size="20.0" />
+               </font>
+            </Text>
+            <Rectangle fx:id="slot11" arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="50.0" layoutX="558.0" layoutY="399.0" stroke="#4979e0" strokeType="INSIDE" strokeWidth="2.0" width="50.0" />
+            <Text fx:id="t11" layoutX="558.0" layoutY="430.0" strokeType="OUTSIDE" strokeWidth="0.0" text="x" textAlignment="CENTER" wrappingWidth="50.0">
+               <font>
+                  <Font name="SansSerif" size="20.0" />
+               </font>
+            </Text>
+            <Rectangle fx:id="slot001223" arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="50.0" layoutX="473.0" layoutY="464.0" stroke="#4979e0" strokeType="INSIDE" strokeWidth="2.0" width="50.0" />
+            <Text fx:id="t09" layoutX="473.0" layoutY="495.0" strokeType="OUTSIDE" strokeWidth="0.0" text="x" textAlignment="CENTER" wrappingWidth="50.0">
+               <font>
+                  <Font name="SansSerif" size="20.0" />
+               </font>
+            </Text>
+            <Rectangle fx:id="slot13" arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="50.0" layoutX="643.0" layoutY="464.0" stroke="#4979e0" strokeType="INSIDE" strokeWidth="2.0" width="50.0" />
+            <Text fx:id="t13" layoutX="643.0" layoutY="495.0" strokeType="OUTSIDE" strokeWidth="0.0" text="x" textAlignment="CENTER" wrappingWidth="50.0">
+               <font>
+                  <Font name="SansSerif" size="20.0" />
+               </font>
+            </Text>
+            <Rectangle fx:id="slot10" arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="50.0" layoutX="523.0" layoutY="528.0" stroke="#4979e0" strokeType="INSIDE" strokeWidth="2.0" width="50.0" />
+            <Text fx:id="t10" layoutX="523.0" layoutY="559.0" strokeType="OUTSIDE" strokeWidth="0.0" text="11" textAlignment="CENTER" wrappingWidth="50.0">
+               <font>
+                  <Font name="SansSerif" size="20.0" />
+               </font>
+            </Text>
+            <Rectangle fx:id="slot12" arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="50.0" layoutX="593.0" layoutY="528.0" stroke="#4979e0" strokeType="INSIDE" strokeWidth="2.0" width="50.0" />
+            <Text fx:id="t12" layoutX="593.0" layoutY="559.0" strokeType="OUTSIDE" strokeWidth="0.0" text="13" textAlignment="CENTER" wrappingWidth="50.0">
+               <font>
+                  <Font name="SansSerif" size="20.0" />
+               </font>
+            </Text>
+            <Rectangle fx:id="slot14" arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="50.0" layoutX="693.0" layoutY="528.0" stroke="#4979e0" strokeType="INSIDE" strokeWidth="2.0" width="50.0" />
+            <Text fx:id="t14" layoutX="693.0" layoutY="559.0" strokeType="OUTSIDE" strokeWidth="0.0" text="15" textAlignment="CENTER" wrappingWidth="50.0">
+               <font>
+                  <Font name="SansSerif" size="20.0" />
+               </font>
+            </Text>
+            <Rectangle fx:id="slot08" arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="50.0" layoutX="423.0" layoutY="528.0" stroke="#4979e0" strokeType="INSIDE" strokeWidth="2.0" width="50.0" />
+            <Text fx:id="t08" layoutX="423.0" layoutY="559.0" strokeType="OUTSIDE" strokeWidth="0.0" text="9" textAlignment="CENTER" wrappingWidth="50.0">
+               <font>
+                  <Font name="SansSerif" size="20.0" />
+               </font>
+            </Text>
+            <Line endX="57.0" endY="-49.0" layoutX="333.0" layoutY="383.0" startX="-60.0" startY="15.0" />
+            <Line endX="-94.0" endY="-49.0" layoutX="534.0" layoutY="383.0" startX="24.0" startY="16.0" />
+            <Line endX="-16.0" endY="-3.0" layoutX="239.0" layoutY="451.0" startX="-51.0" startY="12.0" />
+            <Line endX="-33.0" endY="-7.0" layoutX="341.0" layoutY="470.0" startX="-68.0" startY="-22.0" />
+            <Line endX="-64.0" endY="-9.0" layoutX="422.0" layoutY="536.0" startX="-64.0" startY="-23.0" />
+            <Line endX="-15.0" endY="-1.0" layoutX="323.0" layoutY="514.0" startX="-15.0" startY="13.0" />
+            <Line endX="-111.0" endY="52.0" layoutX="249.0" layoutY="461.0" startX="-111.0" startY="66.0" />
+            <Line endX="-71.0" endY="42.0" layoutX="259.0" layoutY="471.0" startX="-71.0" startY="56.0" />
+            <Line endX="170.0" endY="-14.0" layoutX="351.0" layoutY="480.0" startX="208.0" startY="-31.0" />
+            <Line endX="169.0" endY="-48.0" layoutX="439.0" layoutY="497.0" startX="204.0" startY="-33.0" />
+            <Line endX="177.0" endY="-14.0" layoutX="296.0" layoutY="542.0" startX="177.0" startY="-28.0" />
+            <Line endX="217.0" endY="-24.0" layoutX="306.0" layoutY="552.0" startX="217.0" startY="-38.0" />
+            <Line endX="327.0" endY="-32.0" layoutX="316.0" layoutY="562.0" startX="327.0" startY="-48.0" />
+            <Line endX="367.0" endY="-44.0" layoutX="326.0" layoutY="572.0" startX="367.0" startY="-58.0" />
+            <TextField fx:id="input" layoutX="39.0" layoutY="41.0" />
+            <ButtonBar prefHeight="40.0" prefWidth="200.0" />
+            <Button fx:id="btnSubmit" layoutX="198.0" layoutY="41.0" mnemonicParsing="false" onMouseClicked="#submit" text="Button" />
+         </children></AnchorPane>
       <AnchorPane prefHeight="720.0" prefWidth="250.0" style="-fx-background-color: #d9e5ff; -fx-border-color: dddddd;">
          <children>
             <Button fx:id="btnList" layoutX="25.0" layoutY="230.0" mnemonicParsing="false" onMouseClicked="#GoToLista" prefHeight="40.0" prefWidth="200.0" style="-fx-border-radius: 5px; -fx-background-color: #9fbdff;" text="Lista" textFill="WHITE">

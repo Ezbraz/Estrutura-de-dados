@@ -41,6 +41,9 @@ public class ControllerListaEncadeada {
     private Button btnTree;
 
     @FXML
+    private TextField inputRemove;
+
+    @FXML
     void GoToLista(MouseEvent event) throws IOException {
         Stage stage = (Stage) btnList.getScene().getWindow();
         FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("page-lista.fxml"));
@@ -263,7 +266,7 @@ public class ControllerListaEncadeada {
             if (listaEncadeada.tamanho() == 0) {
                 throw new NullPointerException();
             }
-            int position = Integer.parseInt(inputPosition.getText());
+            int position = Integer.parseInt(inputRemove.getText());
 
             String removido = listaEncadeada.remove(position);
 

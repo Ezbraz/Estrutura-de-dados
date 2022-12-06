@@ -106,6 +106,11 @@ public class ControllerLista {
     private TextField resultSeach;
     @FXML
     private TextField removed;
+
+    @FXML
+    private TextField inputRemove;
+
+
     // fim inputs
 
     // botões
@@ -267,7 +272,7 @@ public class ControllerLista {
             if (listaSeq.tamanho() == 0) {
                 throw new NullPointerException();
             }
-            int position = Integer.parseInt(inputPosition.getText().trim());
+            int position = Integer.parseInt(inputRemove.getText().trim());
             String removido = listaSeq.remove(position).trim();
 
             if ("".equals(removido)) {

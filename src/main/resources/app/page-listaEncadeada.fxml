@@ -15,214 +15,121 @@
    <children>
       <AnchorPane layoutX="250.0" prefHeight="720.0" prefWidth="830.0">
          <children>
-            <Circle fx:id="label01" fill="DODGERBLUE" layoutX="59.0" layoutY="238.0" radius="45.0" stroke="BLACK" strokeType="INSIDE" visible="false" />
-            <Text fx:id="content01" fill="WHITE" fontSmoothingType="LCD" layoutX="46.0" layoutY="244.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" textAlignment="CENTER" visible="false">
+            <Circle fx:id="label01" fill="WHITE" layoutX="59.0" layoutY="238.0" radius="35.0" stroke="#4979e0" strokeType="INSIDE" strokeWidth="2.0" visible="false" />
+            <Text fx:id="content01" fontSmoothingType="LCD" layoutX="54.0" layoutY="248.0" strokeType="OUTSIDE" strokeWidth="0.0" text="1" textAlignment="CENTER" visible="false">
                <font>
-                  <Font size="14.0" />
+                  <Font name="SansSerif" size="20.0" />
                </font>
             </Text>
-            <Line fx:id="link1_2" endX="-14.0" layoutX="146.0" layoutY="241.0" startX="-41.0" visible="false" />
-            <Circle fx:id="label02" fill="DODGERBLUE" layoutX="177.0" layoutY="241.0" radius="45.0" stroke="BLACK" strokeType="INSIDE" visible="false" />
-            <Text fx:id="content02" fill="WHITE" fontSmoothingType="LCD" layoutX="164.0" layoutY="247.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" textAlignment="CENTER" visible="false">
+            <Line fx:id="link1_2" endX="-4.0" layoutX="146.0" layoutY="241.0" startX="-52.666656494140625" visible="false" />
+            <Circle fx:id="label02" fill="WHITE" layoutX="177.0" layoutY="241.0" radius="35.0" stroke="#4979e0" strokeType="INSIDE" strokeWidth="2.0" visible="false" />
+            <Text fx:id="content02" fontSmoothingType="LCD" layoutX="168.0" layoutY="250.0" strokeType="OUTSIDE" strokeWidth="0.0" text="1" textAlignment="CENTER" visible="false">
                <font>
-                  <Font size="14.0" />
+                  <Font name="SansSerif" size="20.0" />
                </font>
             </Text>
-            <Line fx:id="link2_3" endX="-18.0" endY="-1.0" layoutX="264.0" layoutY="243.0" startX="-42.0" startY="-1.0" visible="false" />
-            <Circle fx:id="label03" fill="DODGERBLUE" layoutX="291.0" layoutY="242.0" radius="45.0" stroke="BLACK" strokeType="INSIDE" visible="false" />
-            <Text fx:id="content03" fill="WHITE" fontSmoothingType="LCD" layoutX="278.0" layoutY="248.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" textAlignment="CENTER" visible="false">
+            <Line fx:id="link2_3" endX="-8.0" endY="-1.0" layoutX="264.0" layoutY="243.0" startX="-51.333343505859375" startY="-1.0" visible="false" />
+            <Circle fx:id="label03" fill="WHITE" layoutX="291.0" layoutY="242.0" radius="35.0" stroke="#4979e0" strokeType="INSIDE" strokeWidth="2.0" visible="false" />
+            <Text fx:id="content03" fontSmoothingType="LCD" layoutX="285.0" layoutY="251.0" strokeType="OUTSIDE" strokeWidth="0.0" text="1" textAlignment="CENTER" visible="false">
                <font>
-                  <Font size="14.0" />
+                  <Font name="SansSerif" size="20.0" />
                </font>
             </Text>
-            <Line fx:id="link3_4" endX="-20.0" layoutX="378.0" layoutY="245.0" startX="-41.0" visible="false" />
-            <Circle fx:id="label04" fill="DODGERBLUE" layoutX="404.0" layoutY="245.0" radius="45.0" stroke="BLACK" strokeType="INSIDE" visible="false" />
-            <Text fx:id="content04" fill="WHITE" fontSmoothingType="LCD" layoutX="391.0" layoutY="251.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" textAlignment="CENTER" visible="false">
+            <Line fx:id="link3_4" endX="-9.0" layoutX="378.0" layoutY="245.0" startX="-52.0" visible="false" />
+            <Circle fx:id="label04" fill="WHITE" layoutX="404.0" layoutY="245.0" radius="35.0" stroke="#4979e0" strokeType="INSIDE" strokeWidth="2.0" visible="false" />
+            <Text fx:id="content04" fontSmoothingType="LCD" layoutX="398.0" layoutY="254.0" strokeType="OUTSIDE" strokeWidth="0.0" text="1" textAlignment="CENTER" visible="false">
                <font>
-                  <Font size="14.0" />
+                  <Font name="SansSerif" size="20.0" />
                </font>
             </Text>
-            <Line fx:id="link4_5" endX="-14.0" layoutX="491.0" layoutY="246.0" startX="-41.0" visible="false" />
-            <Circle fx:id="label05" fill="DODGERBLUE" layoutX="522.0" layoutY="246.0" radius="45.0" stroke="BLACK" strokeType="INSIDE" visible="false" />
-            <Text fx:id="content05" fill="WHITE" fontSmoothingType="LCD" layoutX="509.0" layoutY="252.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" textAlignment="CENTER" visible="false">
+            <Line fx:id="link4_5" endX="-3.66668701171875" layoutX="491.0" layoutY="246.0" startX="-52.33331298828125" visible="false" />
+            <Circle fx:id="label05" fill="WHITE" layoutX="522.0" layoutY="246.0" radius="35.0" stroke="#4979e0" strokeType="INSIDE" strokeWidth="2.0" visible="false" />
+            <Text fx:id="content05" fontSmoothingType="LCD" layoutX="516.0" layoutY="255.0" strokeType="OUTSIDE" strokeWidth="0.0" text="1" textAlignment="CENTER" visible="false">
                <font>
-                  <Font size="14.0" />
+                  <Font name="SansSerif" size="20.0" />
                </font>
             </Text>
-            <Line fx:id="link5_6" endX="-18.0" endY="-1.0" layoutX="609.0" layoutY="248.0" startX="-42.0" startY="-1.0" visible="false" />
-            <Circle fx:id="label06" fill="DODGERBLUE" layoutX="636.0" layoutY="247.0" radius="45.0" stroke="BLACK" strokeType="INSIDE" visible="false" />
-            <Text fx:id="content06" fill="WHITE" fontSmoothingType="LCD" layoutX="623.0" layoutY="253.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" textAlignment="CENTER" visible="false">
+            <Line fx:id="link5_6" endX="-8.0" endY="-1.0" layoutX="609.0" layoutY="248.0" startX="-51.66668701171875" startY="-1.0" visible="false" />
+            <Circle fx:id="label06" fill="WHITE" layoutX="636.0" layoutY="247.0" radius="35.0" stroke="#4979e0" strokeType="INSIDE" strokeWidth="2.0" visible="false" />
+            <Text fx:id="content06" fontSmoothingType="LCD" layoutX="630.0" layoutY="256.0" strokeType="OUTSIDE" strokeWidth="0.0" text="1" textAlignment="CENTER" visible="false">
                <font>
-                  <Font size="14.0" />
+                  <Font name="SansSerif" size="20.0" />
                </font>
             </Text>
-            <Line fx:id="link6_7" endX="-20.0" layoutX="723.0" layoutY="250.0" startX="-41.0" visible="false" />
-            <Circle fx:id="label07" fill="DODGERBLUE" layoutX="749.0" layoutY="250.0" radius="45.0" stroke="BLACK" strokeType="INSIDE" visible="false" />
-            <Text fx:id="content07" fill="WHITE" fontSmoothingType="LCD" layoutX="736.0" layoutY="256.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" textAlignment="CENTER" visible="false">
+            <Line fx:id="link6_7" endX="-9.0" layoutX="723.0" layoutY="250.0" startX="-52.0" visible="false" />
+            <Circle fx:id="label07" fill="WHITE" layoutX="749.0" layoutY="252.0" radius="35.0" stroke="#4979e0" strokeType="INSIDE" strokeWidth="2.0" visible="false" />
+            <Text fx:id="content07" fontSmoothingType="LCD" layoutX="743.0" layoutY="259.0" strokeType="OUTSIDE" strokeWidth="0.0" text="1" textAlignment="CENTER" visible="false">
                <font>
-                  <Font size="14.0" />
+                  <Font name="SansSerif" size="20.0" />
                </font>
             </Text>
-            <Line fx:id="link7_8" endX="124.0" layoutX="625.0" layoutY="295.0" startX="-566.0" startY="51.0" visible="false" />
-            <Circle fx:id="label08" fill="DODGERBLUE" layoutX="59.0" layoutY="391.0" radius="45.0" stroke="BLACK" strokeType="INSIDE" visible="false" />
-            <Text fx:id="content08" fill="WHITE" fontSmoothingType="LCD" layoutX="46.0" layoutY="397.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" textAlignment="CENTER" visible="false">
+            <Line fx:id="link7_8" endX="124.0" endY="-8.0" layoutX="625.0" layoutY="295.0" startX="-566.0" startY="63.0" visible="false" />
+            <Circle fx:id="label08" fill="WHITE" layoutX="59.0" layoutY="393.0" radius="35.0" stroke="#4979e0" strokeType="INSIDE" strokeWidth="2.0" visible="false" />
+            <Text fx:id="content08" fontSmoothingType="LCD" layoutX="53.0" layoutY="400.0" strokeType="OUTSIDE" strokeWidth="0.0" text="1" textAlignment="CENTER" visible="false">
                <font>
-                  <Font size="14.0" />
+                  <Font name="SansSerif" size="20.0" />
                </font>
             </Text>
-            <Line fx:id="link8_9" endX="-14.0" layoutX="146.0" layoutY="394.0" startX="-41.0" visible="false" />
-            <Circle fx:id="label09" fill="DODGERBLUE" layoutX="177.0" layoutY="394.0" radius="45.0" stroke="BLACK" strokeType="INSIDE" visible="false" />
-            <Text fx:id="content09" fill="WHITE" fontSmoothingType="LCD" layoutX="164.0" layoutY="400.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" textAlignment="CENTER" visible="false">
+            <Line fx:id="link8_9" endX="-4.0" layoutX="146.0" layoutY="394.0" startX="-52.0" visible="false" />
+            <Circle fx:id="label09" fill="WHITE" layoutX="177.0" layoutY="396.0" radius="35.0" stroke="#4979e0" strokeType="INSIDE" strokeWidth="2.0" visible="false" />
+            <Text fx:id="content09" fontSmoothingType="LCD" layoutX="171.0" layoutY="403.0" strokeType="OUTSIDE" strokeWidth="0.0" text="1" textAlignment="CENTER" visible="false">
                <font>
-                  <Font size="14.0" />
+                  <Font name="SansSerif" size="20.0" />
                </font>
             </Text>
-            <Line fx:id="link9_10" endX="-18.0" endY="-1.0" layoutX="264.0" layoutY="396.0" startX="-42.0" startY="-1.0" visible="false" />
-            <Circle fx:id="label10" fill="DODGERBLUE" layoutX="291.0" layoutY="395.0" radius="45.0" stroke="BLACK" strokeType="INSIDE" visible="false" />
-            <Text fx:id="content10" fill="WHITE" fontSmoothingType="LCD" layoutX="278.0" layoutY="401.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" textAlignment="CENTER" visible="false">
+            <Line fx:id="link9_10" endX="-8.0" endY="-1.0" layoutX="264.0" layoutY="396.0" startX="-52.666656494140625" startY="-1.0" visible="false" />
+            <Circle fx:id="label10" fill="WHITE" layoutX="291.0" layoutY="397.0" radius="35.0" stroke="#4979e0" strokeType="INSIDE" strokeWidth="2.0" visible="false" />
+            <Text fx:id="content10" fontSmoothingType="LCD" layoutX="285.0" layoutY="404.0" strokeType="OUTSIDE" strokeWidth="0.0" text="1" textAlignment="CENTER" visible="false">
                <font>
-                  <Font size="14.0" />
+                  <Font name="SansSerif" size="20.0" />
                </font>
             </Text>
-            <Line fx:id="link10_11" endX="-20.0" layoutX="378.0" layoutY="398.0" startX="-41.0" visible="false" />
-            <Circle fx:id="label11" fill="DODGERBLUE" layoutX="404.0" layoutY="398.0" radius="45.0" stroke="BLACK" strokeType="INSIDE" visible="false" />
-            <Text fx:id="content11" fill="WHITE" fontSmoothingType="LCD" layoutX="391.0" layoutY="404.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" textAlignment="CENTER" visible="false">
+            <Line fx:id="link10_11" endX="-9.0" layoutX="378.0" layoutY="398.0" startX="-52.0" visible="false" />
+            <Circle fx:id="label11" fill="WHITE" layoutX="404.0" layoutY="400.0" radius="35.0" stroke="#4979e0" strokeType="INSIDE" strokeWidth="2.0" visible="false" />
+            <Text fx:id="content11" fontSmoothingType="LCD" layoutX="398.0" layoutY="407.0" strokeType="OUTSIDE" strokeWidth="0.0" text="1" textAlignment="CENTER" visible="false">
                <font>
-                  <Font size="14.0" />
+                  <Font name="SansSerif" size="20.0" />
                </font>
             </Text>
-            <Line fx:id="link11_12" endX="-14.0" layoutX="491.0" layoutY="399.0" startX="-41.0" visible="false" />
-            <Circle fx:id="label12" fill="DODGERBLUE" layoutX="522.0" layoutY="399.0" radius="45.0" stroke="BLACK" strokeType="INSIDE" visible="false" />
-            <Text fx:id="content12" fill="WHITE" fontSmoothingType="LCD" layoutX="509.0" layoutY="405.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" textAlignment="CENTER" visible="false">
+            <Line fx:id="link11_12" endX="-4.0" layoutX="491.0" layoutY="399.0" startX="-52.33331298828125" visible="false" />
+            <Circle fx:id="label12" fill="WHITE" layoutX="522.0" layoutY="401.0" radius="35.0" stroke="#4979e0" strokeType="INSIDE" strokeWidth="2.0" visible="false" />
+            <Text fx:id="content12" fontSmoothingType="LCD" layoutX="516.0" layoutY="408.0" strokeType="OUTSIDE" strokeWidth="0.0" text="1" textAlignment="CENTER" visible="false">
                <font>
-                  <Font size="14.0" />
+                  <Font name="SansSerif" size="20.0" />
                </font>
             </Text>
-            <Line fx:id="link12_13" endX="-18.0" endY="-1.0" layoutX="609.0" layoutY="401.0" startX="-42.0" startY="-1.0" visible="false" />
-            <Circle fx:id="label13" fill="DODGERBLUE" layoutX="636.0" layoutY="400.0" radius="45.0" stroke="BLACK" strokeType="INSIDE" visible="false" />
-            <Text fx:id="content13" fill="WHITE" fontSmoothingType="LCD" layoutX="623.0" layoutY="406.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" textAlignment="CENTER" visible="false">
+            <Line fx:id="link12_13" endX="-8.0" endY="-1.0" layoutX="609.0" layoutY="401.0" startX="-53.0" startY="-1.0" visible="false" />
+            <Circle fx:id="label13" fill="WHITE" layoutX="636.0" layoutY="402.0" radius="35.0" stroke="#4979e0" strokeType="INSIDE" strokeWidth="2.0" visible="false" />
+            <Text fx:id="content13" fontSmoothingType="LCD" layoutX="630.0" layoutY="409.0" strokeType="OUTSIDE" strokeWidth="0.0" text="1" textAlignment="CENTER" visible="false">
                <font>
-                  <Font size="14.0" />
+                  <Font name="SansSerif" size="20.0" />
                </font>
             </Text>
-            <Line fx:id="link13_14" endX="-20.0" layoutX="723.0" layoutY="403.0" startX="-41.0" visible="false" />
-            <Circle fx:id="label14" fill="DODGERBLUE" layoutX="749.0" layoutY="403.0" radius="45.0" stroke="BLACK" strokeType="INSIDE" visible="false" />
-            <Text fx:id="content14" fill="WHITE" fontSmoothingType="LCD" layoutX="736.0" layoutY="409.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" textAlignment="CENTER" visible="false">
+            <Line fx:id="link13_14" endX="-9.0" layoutX="723.0" layoutY="403.0" startX="-52.0" visible="false" />
+            <Circle fx:id="label14" fill="WHITE" layoutX="749.0" layoutY="405.0" radius="35.0" stroke="#4979e0" strokeType="INSIDE" strokeWidth="2.0" visible="false" />
+            <Text fx:id="content14" fontSmoothingType="LCD" layoutX="743.0" layoutY="412.0" strokeType="OUTSIDE" strokeWidth="0.0" text="1" textAlignment="CENTER" visible="false">
                <font>
-                  <Font size="14.0" />
+                  <Font name="SansSerif" size="20.0" />
                </font>
             </Text>
-            <Line fx:id="link14_15" endX="113.0" endY="-1.0" layoutX="636.0" layoutY="449.0" startX="-577.0" startY="48.0" visible="false" />
-            <Circle fx:id="label15" fill="DODGERBLUE" layoutX="59.0" layoutY="542.0" radius="45.0" stroke="BLACK" strokeType="INSIDE" visible="false" />
-            <Text fx:id="content15" fill="WHITE" fontSmoothingType="LCD" layoutX="46.0" layoutY="548.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" textAlignment="CENTER" visible="false">
+            <Line fx:id="link14_15" endX="113.0" endY="-9.0" layoutX="636.0" layoutY="449.0" startX="-577.0" startY="60.0" visible="false" />
+            <Circle fx:id="label15" fill="WHITE" layoutX="59.0" layoutY="544.0" radius="35.0" stroke="#4979e0" strokeType="INSIDE" strokeWidth="2.0" visible="false" />
+            <Text fx:id="content15" fontSmoothingType="LCD" layoutX="53.0" layoutY="551.0" strokeType="OUTSIDE" strokeWidth="0.0" text="1" textAlignment="CENTER" visible="false">
                <font>
-                  <Font size="14.0" />
+                  <Font name="SansSerif" size="20.0" />
                </font>
             </Text>
-            <AnchorPane layoutX="1.0" prefHeight="150.0" prefWidth="829.0" style="-fx-background-color: #f4f4f4;">
-               <children>
-                  <ImageView fx:id="icon" fitHeight="100.0" fitWidth="200.0" layoutX="716.0" layoutY="25.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@assets/layer.png" />
-                     </image>
-                  </ImageView>
-                  <Button fx:id="btnRemove" layoutX="317.0" layoutY="26.0" mnemonicParsing="false" onMouseClicked="#remove" prefHeight="100.0" prefWidth="65.0" style="-fx-background-color: #4979e0;" text="Remove" textFill="WHITE">
-                     <font>
-                        <Font name="SansSerif Bold" size="12.0" />
-                     </font>
-                  </Button>
-                  <TextField fx:id="inputElement" layoutX="13.0" layoutY="40.0" prefHeight="30.0" prefWidth="200.0" />
-                  <Button fx:id="btnInsert" layoutX="244.0" layoutY="25.0" mnemonicParsing="false" onMouseClicked="#insert" prefHeight="100.0" prefWidth="65.0" style="-fx-background-color: #4979e0;" text="Insert" textFill="WHITE">
-                     <font>
-                        <Font name="SansSerif Bold" size="12.0" />
-                     </font>
-                  </Button>
-                  <Text fill="#4979e0" layoutX="14.0" layoutY="33.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Digite o elemento a ser inserido." wrappingWidth="208.533203125">
-                     <font>
-                        <Font name="SansSerif Bold" size="12.0" />
-                     </font>
-                  </Text>
-                  <Button fx:id="btnSearch" layoutX="624.0" layoutY="26.0" mnemonicParsing="false" onMouseClicked="#find" prefHeight="100.0" prefWidth="65.0" style="-fx-background-color: #4979e0;" text="Search" textFill="WHITE">
-                     <font>
-                        <Font name="SansSerif Bold" size="12.0" />
-                     </font>
-                  </Button>
-                  <TextField fx:id="inputSearch" layoutX="412.0" layoutY="40.0" prefHeight="30.0" prefWidth="193.0" />
-                  <Text fill="#4979e0" layoutX="411.0" layoutY="33.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Digite o elemento a ser encontrado" wrappingWidth="208.533203125">
-                     <font>
-                        <Font name="SansSerif Bold" size="12.0" />
-                     </font>
-                  </Text>
-                  <TextField fx:id="resultSeach" editable="false" layoutX="414.0" layoutY="97.0" prefHeight="30.0" prefWidth="80.0" />
-                  <Text fill="#4979e0" layoutX="415.0" layoutY="91.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Posição do elemento" wrappingWidth="208.533203125">
-                     <font>
-                        <Font name="SansSerif Bold" size="12.0" />
-                     </font>
-                  </Text>
-                  <Text fx:id="posicao" layoutX="428.0" layoutY="117.0" strokeType="OUTSIDE" strokeWidth="0.0" text="01" visible="false">
-                     <font>
-                        <Font name="Microsoft Sans Serif" size="14.0" />
-                     </font>
-                  </Text>
-                  <TextField fx:id="inputPosition" layoutX="13.0" layoutY="105.0" prefHeight="30.0" prefWidth="200.0" />
-                  <Text fill="#4979e0" layoutX="14.0" layoutY="83.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Digite a posição a ser inserido/removido:" wrappingWidth="208.533203125">
-                     <font>
-                        <Font name="SansSerif Bold" size="12.0" />
-                     </font>
-                  </Text>
-               </children>
-            </AnchorPane>
-            <TextField fx:id="removed" editable="false" layoutX="655.0" layoutY="624.0" prefHeight="40.0" prefWidth="139.0" />
-            <Text fill="#4979e0" layoutX="660.0" layoutY="598.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Ultimo elemento removido:" wrappingWidth="128.533203125">
+            <TextField fx:id="removed" editable="false" layoutX="675.0" layoutY="650.0" prefHeight="40.0" prefWidth="140.0" />
+            <Text fill="#4979e0" layoutX="675.0" layoutY="630.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Ultimo elemento removido:" wrappingWidth="128.533203125">
                <font>
                   <Font name="SansSerif Bold" size="12.0" />
                </font>
             </Text>
          </children>
       </AnchorPane>
-      <AnchorPane prefHeight="720.0" prefWidth="250.0" style="-fx-background-color: #d9e5ff; -fx-border-color: dddddd;">
+      <AnchorPane prefHeight="720.0" prefWidth="250.0" style="-fx-background-color: ffffff; -fx-border-color: dddddd;">
          <children>
-            <Button fx:id="btnList" layoutX="25.0" layoutY="230.0" mnemonicParsing="false" onMouseClicked="#GoToLista" prefHeight="40.0" prefWidth="200.0" style="-fx-border-radius: 5px; -fx-background-color: #9fbdff;" text="Lista" textFill="WHITE">
-               <font>
-                  <Font name="SansSerif Bold" size="14.0" />
-               </font>
-               <cursor>
-                  <Cursor fx:constant="HAND" />
-               </cursor>
-            </Button>
-            <Button fx:id="btnListEnc" layoutX="25.0" layoutY="285.0" mnemonicParsing="false" onMouseClicked="#GoToListaEncadeada" prefHeight="40.0" prefWidth="200.0" style="-fx-border-radius: 5px; -fx-background-color: #4979e0;" text="Listas Encadeada" textFill="WHITE">
-               <font>
-                  <Font name="SansSerif Bold" size="14.0" />
-               </font>
-               <cursor>
-                  <Cursor fx:constant="HAND" />
-               </cursor>
-            </Button>
-            <Button fx:id="btnPile" layoutX="25.0" layoutY="340.0" mnemonicParsing="false" onMouseClicked="#GoToPilha" prefHeight="40.0" prefWidth="200.0" style="-fx-border-radius: 5px; -fx-background-color: #9fbdff;" text="Pilha" textFill="WHITE">
-               <font>
-                  <Font name="SansSerif Bold" size="14.0" />
-               </font>
-               <cursor>
-                  <Cursor fx:constant="HAND" />
-               </cursor>
-            </Button>
-            <Button fx:id="btnQueue" layoutX="25.0" layoutY="395.0" mnemonicParsing="false" onMouseClicked="#GoToFila" prefHeight="40.0" prefWidth="200.0" style="-fx-border-radius: 5px; -fx-background-color: #9fbdff;" text="Fila" textFill="WHITE">
-               <font>
-                  <Font name="SansSerif Bold" size="14.0" />
-               </font>
-               <cursor>
-                  <Cursor fx:constant="HAND" />
-               </cursor>
-            </Button>
-            <Button fx:id="btnTree" layoutX="25.0" layoutY="450.0" mnemonicParsing="false" onMouseClicked="#GoToArvore" prefHeight="40.0" prefWidth="200.0" style="-fx-border-radius: 5px; -fx-background-color: #9fbdff;" text="árvore Binária" textFill="WHITE">
-               <font>
-                  <Font name="SansSerif Bold" size="14.0" />
-               </font>
-               <cursor>
-                  <Cursor fx:constant="HAND" />
-               </cursor>
-            </Button>
-            <Button fx:id="btnList1" layoutX="25.0" layoutY="666.0" mnemonicParsing="false" onMouseClicked="#GoToHome" prefHeight="30.0" prefWidth="200.0" style="-fx-border-radius: 5px; -fx-background-color: #9fbdff;" text="Sair" textFill="WHITE">
+            <Button fx:id="btnList" layoutX="15.0" layoutY="170.0" mnemonicParsing="false" onMouseClicked="#GoToLista" prefHeight="30.0" prefWidth="220.0" style="-fx-border-radius: 5px; -fx-background-color: dddddd;" text="Lista" textFill="#656565">
                <font>
                   <Font name="SansSerif" size="14.0" />
                </font>
@@ -230,8 +137,105 @@
                   <Cursor fx:constant="HAND" />
                </cursor>
             </Button>
+            <Button fx:id="btnListEnc" layoutX="15.0" layoutY="220.0" mnemonicParsing="false" onMouseClicked="#GoToListaEncadeada" prefHeight="30.0" prefWidth="220.0" style="-fx-border-radius: 5px; -fx-background-color: #4979e0;" text="Listas Encadeada" textFill="WHITE">
+               <font>
+                  <Font name="SansSerif Bold" size="14.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Button fx:id="btnPile" layoutX="15.0" layoutY="270.0" mnemonicParsing="false" onMouseClicked="#GoToPilha" prefHeight="30.0" prefWidth="220.0" style="-fx-border-radius: 5px; -fx-background-color: dddddd;" text="Pilha" textFill="#656565">
+               <font>
+                  <Font name="SansSerif" size="14.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Button fx:id="btnQueue" layoutX="15.0" layoutY="320.0" mnemonicParsing="false" onMouseClicked="#GoToFila" prefHeight="30.0" prefWidth="220.0" style="-fx-border-radius: 5px; -fx-background-color: dddddd;" text="Fila" textFill="#656565">
+               <font>
+                  <Font name="SansSerif" size="14.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Button fx:id="btnTree" layoutX="15.0" layoutY="370.0" mnemonicParsing="false" onMouseClicked="#GoToArvore" prefHeight="30.0" prefWidth="220.0" style="-fx-border-radius: 5px; -fx-background-color: dddddd;" text="árvore Binária" textFill="#656565">
+               <font>
+                  <Font name="SansSerif" size="14.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Button fx:id="btnList1" layoutX="15.0" layoutY="675.0" mnemonicParsing="false" onMouseClicked="#GoToHome" prefHeight="30.0" prefWidth="220.0" style="-fx-border-radius: 5px; -fx-background-color: dddddd;" text="Sair" textFill="#656565">
+               <font>
+                  <Font name="SansSerif" size="14.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <TextField fx:id="inputElement" layoutX="15.0" layoutY="465.0" prefHeight="30.0" prefWidth="70.0" />
+            <TextField fx:id="inputPosition" layoutX="95.0" layoutY="465.0" prefHeight="30.0" prefWidth="70.0" />
+            <Button fx:id="btnInsert" layoutX="173.0" layoutY="465.0" mnemonicParsing="false" onMouseClicked="#insert" prefHeight="30.0" prefWidth="65.0" style="-fx-background-color: #4979e0;" text="Insert" textFill="WHITE">
+               <font>
+                  <Font name="SansSerif Bold" size="12.0" />
+               </font>
+            </Button>
+            <Button fx:id="btnRemove" layoutX="175.0" layoutY="545.0" mnemonicParsing="false" onMouseClicked="#remove" prefHeight="30.0" prefWidth="65.0" style="-fx-background-color: #4979e0;" text="Remove" textFill="WHITE">
+               <font>
+                  <Font name="SansSerif Bold" size="12.0" />
+               </font>
+            </Button>
+            <TextField fx:id="inputSearch" layoutX="15.0" layoutY="625.0" prefHeight="30.0" prefWidth="100.0" />
+            <Button fx:id="btnSearch" layoutX="122.0" layoutY="625.0" mnemonicParsing="false" onMouseClicked="#find" prefHeight="30.0" prefWidth="60.0" style="-fx-background-color: #4979e0;" text="Search" textFill="WHITE">
+               <font>
+                  <Font name="SansSerif Bold" size="12.0" />
+               </font>
+            </Button>
+            <TextField fx:id="resultSeach" editable="false" layoutX="190.0" layoutY="625.0" prefHeight="30.0" prefWidth="45.0" />
          </children>
       </AnchorPane>
-      <Text fill="#9c9c9c" layoutX="467.0" layoutY="702.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Projeto desenvolvido para a disciplina de Estrutura de Dados - UFPB - 2022" />
+      <Text fill="#9c9c9c" layoutX="467.0" layoutY="710.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Projeto desenvolvido para a disciplina de Estrutura de Dados - UFPB - 2022" />
+      <ImageView fx:id="icon1" fitHeight="100.0" fitWidth="200.0" layoutX="75.0" layoutY="32.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@assets/document.png" />
+         </image>
+      </ImageView>
+      <Line endX="250.0" layoutY="420.0" stroke="#dddddd" strokeWidth="0.5" />
+      <Line endX="250.0" layoutY="150.0" stroke="#dddddd" strokeWidth="0.5" />
+      <Text fill="#4979e0" layoutX="15.0" layoutY="440.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Inserção" wrappingWidth="132.19989013671875">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Text>
+      <Text fill="#656565" layoutX="15.0" layoutY="460.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Digite o elemento e a posição a ser inserido" wrappingWidth="213.19989013671875">
+         <font>
+            <Font size="10.0" />
+         </font>
+      </Text>
+      <Text fill="#4979e0" layoutX="15.0" layoutY="520.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Remoção" wrappingWidth="213.19989013671875">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Text>
+      <Text fill="#656565" layoutX="15.0" layoutY="540.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Digite o elemento e a posição a ser excluído" wrappingWidth="213.19989013671875">
+         <font>
+            <Font size="10.0" />
+         </font>
+      </Text>
+      <Text fill="#4979e0" layoutX="15.0" layoutY="600.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Busca" wrappingWidth="213.19989013671875">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Text>
+      <Text fill="#656565" layoutX="15.0" layoutY="620.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Digite o elemento que deseja encontrar a posição" wrappingWidth="225.0">
+         <font>
+            <Font size="10.0" />
+         </font>
+      </Text>
+      <TextField fx:id="inputRemove" layoutX="15.0" layoutY="545.0" prefHeight="30.0" prefWidth="150.0" />
          </children>
 </AnchorPane>

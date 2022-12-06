@@ -36,11 +36,11 @@ public class LSE {
      */
     public String elemento(int pos) {
         if (vazia()) {
-            return "-1"; // Consulta falhou
+            return ""; // Consulta falhou
         }
 
         if ((pos < 1) || (pos > tamanho())) {
-            return "-1"; // Posicao invalida
+            return ""; // Posicao invalida
         }
 
         No aux = cabeca;
@@ -55,7 +55,7 @@ public class LSE {
 
     /**
      * Retorna a posição de um elemento pesquisado.
-     * Retorna -1 caso não seja encontrado
+     * Retorna caso não seja encontrado
      */
     public int posicao(String dado) {
         /* Lista vazia */
@@ -181,11 +181,11 @@ public class LSE {
 
     public String remove(int pos) {
         if (vazia()) {
-            return "-1"; // Lista vazia
+            return ""; // Lista vazia
         }
 
         if ((pos <= 0) || (pos > nElementos)) {
-            return "-1"; // Posicao invalida
+            return ""; // Posicao invalida
         }
 
         // Remoção do elemento da cabeça da lista

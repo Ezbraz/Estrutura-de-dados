@@ -3,8 +3,10 @@ package app;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
+import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
+import javafx.scene.control.Alert.AlertType;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.shape.Circle;
 import javafx.scene.shape.Line;
@@ -13,6 +15,7 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 
+import app.listas.ListaSeq;
 import app.listas.encadeada.LSE;
 
 public class ControllerListaEncadeada {
@@ -221,59 +224,101 @@ public class ControllerListaEncadeada {
     // func
     @FXML
     private void insert() {
-        System.out.println("Inserindo");
-
-        int position = Integer.parseInt(inputPosition.getText());
-        String element = inputElement.getText();
-        if (listaEncadeada.tamanho() < 15) {
-            if (!listaEncadeada.insere(position, element)) {
-                System.out.println("Error");
+        System.out.println("Inserindo...");
+        try {
+            int position = Integer.parseInt(inputPosition.getText().trim());
+            String element = inputElement.getText().trim();
+            if (element.length() == 0) {
+                throw new IllegalArgumentException();
+            } else if (position < 1 || position > (listaEncadeada.tamanho() + 1)) {
+                throw new NullPointerException();
             }
-        } else {
-            System.out.println("Lista \"cheia\"");
+
+            if (listaEncadeada.tamanho() < 15) {
+                if (!listaEncadeada.insere(position, element)) {
+                    System.out.println("Error.");
+                }
+            } else {
+                throw new IndexOutOfBoundsException();
+            }
+
+            System.out.println("Tamanho:" + listaEncadeada.tamanho());
+            render();
+            // limpando os inputs
+            inputElement.setText("");
+            inputPosition.setText("");
+        } catch (NullPointerException e) {
+            msgErrorAlert("Posição inserida foi inválida.", "Por favor insira uma posição válida.");
+        } catch (IndexOutOfBoundsException e) {
+            msgErrorAlert("Lista \"Cheia\"!", "Para inserir algo novo na lista algum item deve ser removido.");
+        } catch (Exception e) {
+            inputErrorAlert();
+            System.out.println("Campo vazio ou caractere invalido.");
         }
-
-        System.out.println("Tamanho:" + listaEncadeada.tamanho());
-        render();
-
     }
 
     @FXML
     private void remove() {
         System.out.println("Removendo");
+        try {
+            if (listaEncadeada.tamanho() == 0) {
+                throw new NullPointerException();
+            }
+            int position = Integer.parseInt(inputPosition.getText());
 
-        int position = Integer.parseInt(inputPosition.getText());
+            String removido = listaEncadeada.remove(position);
 
-        String removido = listaEncadeada.remove(position);
+            if ("".equals(removido)) {
+                msgErrorAlert("Posição invalida.", "Insira uma posição válida.");
+            } else {
+                removed.setText(removido);
 
-        if ("-1".equals(removido)) {
-            System.out.println("Error");
-        } else {
-            removed.setText(removido);
+                System.out.println("Elemento removido: " + removido);
+            }
 
-            System.out.println("Elemento removido: " + removido);
+            System.out.println("Tamanho:" + listaEncadeada.tamanho());
+            render();
+            inputElement.setText("");
+            inputPosition.setText("");
+        } catch (NullPointerException e) {
+            msgErrorAlert("Lista Vazia.", "Lista vazia, um elemento deve ser inserido para poder ser removido.");
+        } catch (Exception e) {
+            inputErrorAlert();
+            System.out.println("Campo vazio ou caractere invalido.");
         }
-
-        System.out.println("Tamanho:" + listaEncadeada.tamanho());
-        render();
     }
 
     @FXML
     private void find() {
-        System.out.println("Pesquisando");
+        try {
+            System.out.println("Pesquisando...");
 
-        String procurado = inputSearch.getText();
+            String procurado = inputSearch.getText().trim();
+            if (procurado.length() == 0) {
+                throw new IllegalArgumentException();
+            }
+            if (listaEncadeada.tamanho() == 0) {
+                throw new NullPointerException();
+            }
 
-        int result = listaEncadeada.posicao(procurado);
-        if (result > 0) {
-            resultSeach.setText(Integer.toString(result));
-        } else {
-            resultSeach.setText("Null");
+            int result = listaEncadeada.posicao(procurado);
+            if (result > 0) {
+                resultSeach.setText(Integer.toString(result));
+            } else {
+                resultSeach.setText("Null");
+            }
+
+            inputSearch.setText("");
+        } catch (NullPointerException e) {
+            msgErrorAlert("Lista Vazia.", "Lista vazia, um elemento deve ser inserido para poder ser removido.");
+        } catch (Exception e) {
+            inputErrorAlert();
+            System.out.println("Campo vazio ou caractere invalido.");
         }
     }
 
     private void render() {
-        if (!("-1").equals(listaEncadeada.elemento(1))) {
+        if (!("").equals(listaEncadeada.elemento(1))) {
             label01.setVisible(true);
             content01.setVisible(true);
             link1_2.setVisible(true);
@@ -287,7 +332,7 @@ public class ControllerListaEncadeada {
             content01.setText(" ");
         }
 
-        if (!("-1").equals(listaEncadeada.elemento(2))) {
+        if (!("").equals(listaEncadeada.elemento(2))) {
             label02.setVisible(true);
             content02.setVisible(true);
             link2_3.setVisible(true);
@@ -301,7 +346,7 @@ public class ControllerListaEncadeada {
             content02.setText(" ");
         }
 
-        if (!("-1").equals(listaEncadeada.elemento(3))) {
+        if (!("").equals(listaEncadeada.elemento(3))) {
             label03.setVisible(true);
             content03.setVisible(true);
             link3_4.setVisible(true);
@@ -315,7 +360,7 @@ public class ControllerListaEncadeada {
             content03.setText(" ");
         }
 
-        if (!("-1").equals(listaEncadeada.elemento(4))) {
+        if (!("").equals(listaEncadeada.elemento(4))) {
             label04.setVisible(true);
             content04.setVisible(true);
             link4_5.setVisible(true);
@@ -329,7 +374,7 @@ public class ControllerListaEncadeada {
             content04.setText(" ");
         }
 
-        if (!("-1").equals(listaEncadeada.elemento(5))) {
+        if (!("").equals(listaEncadeada.elemento(5))) {
             label05.setVisible(true);
             content05.setVisible(true);
             link5_6.setVisible(true);
@@ -343,7 +388,7 @@ public class ControllerListaEncadeada {
             content05.setText(" ");
         }
 
-        if (!("-1").equals(listaEncadeada.elemento(6))) {
+        if (!("").equals(listaEncadeada.elemento(6))) {
             label06.setVisible(true);
             content06.setVisible(true);
             link6_7.setVisible(true);
@@ -357,7 +402,7 @@ public class ControllerListaEncadeada {
             content06.setText(" ");
         }
 
-        if (!("-1").equals(listaEncadeada.elemento(7))) {
+        if (!("").equals(listaEncadeada.elemento(7))) {
             label07.setVisible(true);
             content07.setVisible(true);
             link7_8.setVisible(true);
@@ -371,7 +416,7 @@ public class ControllerListaEncadeada {
             content07.setText(" ");
         }
 
-        if (!("-1").equals(listaEncadeada.elemento(8))) {
+        if (!("").equals(listaEncadeada.elemento(8))) {
             label08.setVisible(true);
             content08.setVisible(true);
             link8_9.setVisible(true);
@@ -385,7 +430,7 @@ public class ControllerListaEncadeada {
             content08.setText(" ");
         }
 
-        if (!("-1").equals(listaEncadeada.elemento(9))) {
+        if (!("").equals(listaEncadeada.elemento(9))) {
             label09.setVisible(true);
             content09.setVisible(true);
             link9_10.setVisible(true);
@@ -399,7 +444,7 @@ public class ControllerListaEncadeada {
             content09.setText(" ");
         }
 
-        if (!("-1").equals(listaEncadeada.elemento(10))) {
+        if (!("").equals(listaEncadeada.elemento(10))) {
             label10.setVisible(true);
             content10.setVisible(true);
             link10_11.setVisible(true);
@@ -413,7 +458,7 @@ public class ControllerListaEncadeada {
             content10.setText(" ");
         }
 
-        if (!("-1").equals(listaEncadeada.elemento(11))) {
+        if (!("").equals(listaEncadeada.elemento(11))) {
             label11.setVisible(true);
             content11.setVisible(true);
             link11_12.setVisible(true);
@@ -427,7 +472,7 @@ public class ControllerListaEncadeada {
             content11.setText(" ");
         }
 
-        if (!("-1").equals(listaEncadeada.elemento(12))) {
+        if (!("").equals(listaEncadeada.elemento(12))) {
             label12.setVisible(true);
             content12.setVisible(true);
             link12_13.setVisible(true);
@@ -441,7 +486,7 @@ public class ControllerListaEncadeada {
             content12.setText(" ");
         }
 
-        if (!("-1").equals(listaEncadeada.elemento(13))) {
+        if (!("").equals(listaEncadeada.elemento(13))) {
             label13.setVisible(true);
             content13.setVisible(true);
             link13_14.setVisible(true);
@@ -455,7 +500,7 @@ public class ControllerListaEncadeada {
             content13.setText(" ");
         }
 
-        if (!("-1").equals(listaEncadeada.elemento(14))) {
+        if (!("").equals(listaEncadeada.elemento(14))) {
             label14.setVisible(true);
             content14.setVisible(true);
             link14_15.setVisible(true);
@@ -469,7 +514,7 @@ public class ControllerListaEncadeada {
             content14.setText(" ");
         }
 
-        if (!("-1").equals(listaEncadeada.elemento(15))) {
+        if (!("").equals(listaEncadeada.elemento(15))) {
             label15.setVisible(true);
             content15.setVisible(true);
             // link9_10.setVisible(true);
@@ -482,5 +527,21 @@ public class ControllerListaEncadeada {
 
             content15.setText(" ");
         }
+    }
+
+    private void msgErrorAlert(String title, String textContent) {
+        Alert alert = new Alert(AlertType.ERROR);
+        alert.setTitle("Aviso!");
+        alert.setHeaderText(title);
+        alert.setContentText(textContent);
+        alert.showAndWait();
+    }
+
+    private void inputErrorAlert() {
+        Alert alert = new Alert(AlertType.ERROR);
+        alert.setTitle("Aviso!");
+        alert.setHeaderText("Campo vazio ou caractere invalido.");
+        alert.setContentText("Verifique os campos inseridos.");
+        alert.showAndWait();
     }
 }

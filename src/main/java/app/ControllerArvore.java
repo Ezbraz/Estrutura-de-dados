@@ -6,6 +6,7 @@ import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
 import javafx.scene.input.MouseEvent;
+import javafx.scene.shape.Line;
 import javafx.scene.shape.Rectangle;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
@@ -43,12 +44,14 @@ public class ControllerArvore {
 
     @FXML
     private TextField input;
+    @FXML
+    private TextField caminhamento;
 
     @FXML
     private Rectangle slot00;
 
     @FXML
-    private Rectangle slot001223;
+    private Rectangle slot09;
 
     @FXML
     private Rectangle slot01;
@@ -137,6 +140,48 @@ public class ControllerArvore {
     @FXML
     private Button btnSubmit;
 
+    @FXML
+    private Line line1;
+
+    @FXML
+    private Line line10;
+
+    @FXML
+    private Line line11;
+
+    @FXML
+    private Line line12;
+
+    @FXML
+    private Line line13;
+
+    @FXML
+    private Line line14;
+
+    @FXML
+    private Line line2;
+
+    @FXML
+    private Line line3;
+
+    @FXML
+    private Line line4;
+
+    @FXML
+    private Line line5;
+
+    @FXML
+    private Line line6;
+
+    @FXML
+    private Line line7;
+
+    @FXML
+    private Line line8;
+
+    @FXML
+    private Line line9;
+
 
     //--------------------------------------------
 
@@ -206,43 +251,174 @@ public class ControllerArvore {
         Collections.sort(arrayLista);
         //Arrays.sort(array);
     }
+
+    void turnOn(Line line, Rectangle rec, Text text, String elemento){
+
+        line.setVisible(true);
+        rec.setVisible(true);
+        text.setVisible(true);
+        text.setText(elemento);
+    }
+
+    void turnOn1(Rectangle rec, Text text, String elemento){
+
+        rec.setVisible(true);
+        text.setVisible(true);
+        text.setText(elemento);
+    }
+
     void balancearArvore(){
 
         if(arrayLista.size()==1){
-            t07.setText(String.valueOf(arrayLista.get(0)));
+            turnOn1(slot07, t07, String.valueOf(arrayLista.get(0)));
+            caminhamento.setText(String.valueOf(arrayLista));
         } else if (arrayLista.size()==2){
-            t07.setText(String.valueOf(arrayLista.get(1)));
-            t03.setText(String.valueOf(arrayLista.get(0)));
+            turnOn1(slot07, t07, String.valueOf(arrayLista.get(1)));
+            turnOn(line1, slot03, t03, String.valueOf(arrayLista.get(0)));
+            caminhamento.setText(String.valueOf(arrayLista));
         } else if (arrayLista.size()==3){
-            t07.setText(String.valueOf(arrayLista.get(1)));
-            t03.setText(String.valueOf(arrayLista.get(0)));
-            t11.setText(String.valueOf(arrayLista.get(2)));
+            turnOn1(slot07, t07, String.valueOf(arrayLista.get(1)));
+            turnOn(line1, slot03, t03, String.valueOf(arrayLista.get(0)));
+            turnOn(line2, slot11, t11, String.valueOf(arrayLista.get(2)));
+            caminhamento.setText(String.valueOf(arrayLista));
         } else if (arrayLista.size()==4){
-            t07.setText(String.valueOf(arrayLista.get(2)));
-            t03.setText(String.valueOf(arrayLista.get(1)));
-            t11.setText(String.valueOf(arrayLista.get(3)));
-            t01.setText(String.valueOf(arrayLista.get(0)));
+            turnOn1(slot07, t07, String.valueOf(arrayLista.get(2)));
+            turnOn(line1, slot03, t03, String.valueOf(arrayLista.get(1)));
+            turnOn(line2, slot11, t11, String.valueOf(arrayLista.get(3)));
+            turnOn(line3, slot01, t01, String.valueOf(arrayLista.get(0)));
+            caminhamento.setText(String.valueOf(arrayLista));
         } else if (arrayLista.size()==5){
-            t07.setText(String.valueOf(arrayLista.get(2)));
-            t03.setText(String.valueOf(arrayLista.get(1)));
-            t11.setText(String.valueOf(arrayLista.get(3)));
-            t01.setText(String.valueOf(arrayLista.get(0)));
-            t13.setText(String.valueOf(arrayLista.get(4)));
+            turnOn1(slot07, t07, String.valueOf(arrayLista.get(2)));
+            turnOn(line1, slot03, t03, String.valueOf(arrayLista.get(1)));
+            turnOn(line2, slot11, t11, String.valueOf(arrayLista.get(3)));
+            turnOn(line3, slot01, t01, String.valueOf(arrayLista.get(0)));
+            turnOn(line6, slot13, t13, String.valueOf(arrayLista.get(4)));
+            caminhamento.setText(String.valueOf(arrayLista));
         } else if (arrayLista.size()==6){
-            t07.setText(String.valueOf(arrayLista.get(3)));
-            t03.setText(String.valueOf(arrayLista.get(1)));
-            t11.setText(String.valueOf(arrayLista.get(4)));
-            t01.setText(String.valueOf(arrayLista.get(0)));
-            t13.setText(String.valueOf(arrayLista.get(5)));
-            t05.setText(String.valueOf(arrayLista.get(0)));
+            turnOn1(slot07, t07, String.valueOf(arrayLista.get(3)));
+            turnOn(line1, slot03, t03, String.valueOf(arrayLista.get(1)));
+            turnOn(line2, slot11, t11, String.valueOf(arrayLista.get(4)));
+            turnOn(line3, slot01, t01, String.valueOf(arrayLista.get(0)));
+            turnOn(line6, slot13, t13, String.valueOf(arrayLista.get(5)));
+            turnOn(line4, slot05, t05, String.valueOf(arrayLista.get(2)));
+            caminhamento.setText(String.valueOf(arrayLista));
         } else if (arrayLista.size()==7){
-            t07.setText(String.valueOf(arrayLista.get(3)));
-            t03.setText(String.valueOf(arrayLista.get(1)));
-            t11.setText(String.valueOf(arrayLista.get(5)));
-            t01.setText(String.valueOf(arrayLista.get(0)));
-            t13.setText(String.valueOf(arrayLista.get(6)));
-            t05.setText(String.valueOf(arrayLista.get(2)));
-            t09.setText(String.valueOf(arrayLista.get(4)));
+            turnOn1(slot07, t07, String.valueOf(arrayLista.get(3)));
+            turnOn(line1, slot03, t03, String.valueOf(arrayLista.get(1)));
+            turnOn(line2, slot11, t11, String.valueOf(arrayLista.get(5)));
+            turnOn(line3, slot01, t01, String.valueOf(arrayLista.get(0)));
+            turnOn(line6, slot13, t13, String.valueOf(arrayLista.get(6)));
+            turnOn(line4, slot05, t05, String.valueOf(arrayLista.get(2)));
+            turnOn(line5, slot09, t09, String.valueOf(arrayLista.get(4)));
+            caminhamento.setText(String.valueOf(arrayLista));
+        } else if (arrayLista.size()==8){
+            turnOn1(slot07, t07, String.valueOf(arrayLista.get(4)));
+            turnOn(line1, slot03, t03, String.valueOf(arrayLista.get(2)));
+            turnOn(line2, slot11, t11, String.valueOf(arrayLista.get(6)));
+            turnOn(line3, slot01, t01, String.valueOf(arrayLista.get(1)));
+            turnOn(line6, slot13, t13, String.valueOf(arrayLista.get(7)));
+            turnOn(line4, slot05, t05, String.valueOf(arrayLista.get(3)));
+            turnOn(line5, slot09, t09, String.valueOf(arrayLista.get(5)));
+            turnOn(line7, slot00, t00, String.valueOf(arrayLista.get(0)));
+            caminhamento.setText(String.valueOf(arrayLista));
+        } else if (arrayLista.size()==9){
+            turnOn1(slot07, t07, String.valueOf(arrayLista.get(4)));
+            turnOn(line1, slot03, t03, String.valueOf(arrayLista.get(2)));
+            turnOn(line2, slot11, t11, String.valueOf(arrayLista.get(6)));
+            turnOn(line3, slot01, t01, String.valueOf(arrayLista.get(1)));
+            turnOn(line6, slot13, t13, String.valueOf(arrayLista.get(7)));
+            turnOn(line4, slot05, t05, String.valueOf(arrayLista.get(3)));
+            turnOn(line5, slot09, t09, String.valueOf(arrayLista.get(5)));
+            turnOn(line7, slot00, t00, String.valueOf(arrayLista.get(0)));
+            turnOn(line14, slot14, t14, String.valueOf(arrayLista.get(8)));
+            caminhamento.setText(String.valueOf(arrayLista));
+        } else if (arrayLista.size()==10){
+            turnOn1(slot07, t07, String.valueOf(arrayLista.get(5)));
+            turnOn(line1, slot03, t03, String.valueOf(arrayLista.get(2)));
+            turnOn(line2, slot11, t11, String.valueOf(arrayLista.get(7)));
+            turnOn(line3, slot01, t01, String.valueOf(arrayLista.get(1)));
+            turnOn(line6, slot13, t13, String.valueOf(arrayLista.get(8)));
+            turnOn(line4, slot05, t05, String.valueOf(arrayLista.get(3)));
+            turnOn(line5, slot09, t09, String.valueOf(arrayLista.get(6)));
+            turnOn(line7, slot00, t00, String.valueOf(arrayLista.get(0)));
+            turnOn(line14, slot14, t14, String.valueOf(arrayLista.get(9)));
+            turnOn(line10, slot06, t06, String.valueOf(arrayLista.get(4)));
+            caminhamento.setText(String.valueOf(arrayLista));
+        } else if (arrayLista.size()==11){
+            turnOn1(slot07, t07, String.valueOf(arrayLista.get(5)));
+            turnOn(line1, slot03, t03, String.valueOf(arrayLista.get(2)));
+            turnOn(line2, slot11, t11, String.valueOf(arrayLista.get(8)));
+            turnOn(line3, slot01, t01, String.valueOf(arrayLista.get(1)));
+            turnOn(line6, slot13, t13, String.valueOf(arrayLista.get(9)));
+            turnOn(line4, slot05, t05, String.valueOf(arrayLista.get(3)));
+            turnOn(line5, slot09, t09, String.valueOf(arrayLista.get(7)));
+            turnOn(line7, slot00, t00, String.valueOf(arrayLista.get(0)));
+            turnOn(line14, slot14, t14, String.valueOf(arrayLista.get(10)));
+            turnOn(line10, slot06, t06, String.valueOf(arrayLista.get(4)));
+            turnOn(line11, slot08, t08, String.valueOf(arrayLista.get(6)));
+            caminhamento.setText(String.valueOf(arrayLista));
+        } else if (arrayLista.size()==12){
+            turnOn1(slot07, t07, String.valueOf(arrayLista.get(6)));
+            turnOn(line1, slot03, t03, String.valueOf(arrayLista.get(3)));
+            turnOn(line2, slot11, t11, String.valueOf(arrayLista.get(9)));
+            turnOn(line3, slot01, t01, String.valueOf(arrayLista.get(1)));
+            turnOn(line6, slot13, t13, String.valueOf(arrayLista.get(10)));
+            turnOn(line4, slot05, t05, String.valueOf(arrayLista.get(4)));
+            turnOn(line5, slot09, t09, String.valueOf(arrayLista.get(8)));
+            turnOn(line7, slot00, t00, String.valueOf(arrayLista.get(0)));
+            turnOn(line14, slot14, t14, String.valueOf(arrayLista.get(11)));
+            turnOn(line10, slot06, t06, String.valueOf(arrayLista.get(5)));
+            turnOn(line11, slot08, t08, String.valueOf(arrayLista.get(7)));
+            turnOn(line8, slot02, t02, String.valueOf(arrayLista.get(2)));
+            caminhamento.setText(String.valueOf(arrayLista));
+        } else if (arrayLista.size()==13){
+            turnOn1(slot07, t07, String.valueOf(arrayLista.get(6)));
+            turnOn(line1, slot03, t03, String.valueOf(arrayLista.get(3)));
+            turnOn(line2, slot11, t11, String.valueOf(arrayLista.get(10)));
+            turnOn(line3, slot01, t01, String.valueOf(arrayLista.get(1)));
+            turnOn(line6, slot13, t13, String.valueOf(arrayLista.get(11)));
+            turnOn(line4, slot05, t05, String.valueOf(arrayLista.get(4)));
+            turnOn(line5, slot09, t09, String.valueOf(arrayLista.get(8)));
+            turnOn(line7, slot00, t00, String.valueOf(arrayLista.get(0)));
+            turnOn(line14, slot14, t14, String.valueOf(arrayLista.get(12)));
+            turnOn(line10, slot06, t06, String.valueOf(arrayLista.get(5)));
+            turnOn(line11, slot08, t08, String.valueOf(arrayLista.get(7)));
+            turnOn(line8, slot02, t02, String.valueOf(arrayLista.get(2)));
+            turnOn(line12, slot10, t10, String.valueOf(arrayLista.get(9)));
+            caminhamento.setText(String.valueOf(arrayLista));
+        } else if (arrayLista.size()==14){
+            turnOn1(slot07, t07, String.valueOf(arrayLista.get(7)));
+            turnOn(line1, slot03, t03, String.valueOf(arrayLista.get(3)));
+            turnOn(line2, slot11, t11, String.valueOf(arrayLista.get(11)));
+            turnOn(line3, slot01, t01, String.valueOf(arrayLista.get(1)));
+            turnOn(line6, slot13, t13, String.valueOf(arrayLista.get(12)));
+            turnOn(line4, slot05, t05, String.valueOf(arrayLista.get(5)));
+            turnOn(line5, slot09, t09, String.valueOf(arrayLista.get(9)));
+            turnOn(line7, slot00, t00, String.valueOf(arrayLista.get(0)));
+            turnOn(line14, slot14, t14, String.valueOf(arrayLista.get(13)));
+            turnOn(line10, slot06, t06, String.valueOf(arrayLista.get(6)));
+            turnOn(line11, slot08, t08, String.valueOf(arrayLista.get(8)));
+            turnOn(line8, slot02, t02, String.valueOf(arrayLista.get(2)));
+            turnOn(line12, slot10, t10, String.valueOf(arrayLista.get(10)));
+            turnOn(line9, slot04, t04, String.valueOf(arrayLista.get(4)));
+            caminhamento.setText(String.valueOf(arrayLista));
+        } else if (arrayLista.size()==15){
+            turnOn1(slot07, t07, String.valueOf(arrayLista.get(7)));
+            turnOn(line1, slot03, t03, String.valueOf(arrayLista.get(3)));
+            turnOn(line2, slot11, t11, String.valueOf(arrayLista.get(11)));
+            turnOn(line3, slot01, t01, String.valueOf(arrayLista.get(1)));
+            turnOn(line6, slot13, t13, String.valueOf(arrayLista.get(13)));
+            turnOn(line4, slot05, t05, String.valueOf(arrayLista.get(5)));
+            turnOn(line5, slot09, t09, String.valueOf(arrayLista.get(9)));
+            turnOn(line7, slot00, t00, String.valueOf(arrayLista.get(0)));
+            turnOn(line14, slot14, t14, String.valueOf(arrayLista.get(14)));
+            turnOn(line10, slot06, t06, String.valueOf(arrayLista.get(6)));
+            turnOn(line11, slot08, t08, String.valueOf(arrayLista.get(8)));
+            turnOn(line8, slot02, t02, String.valueOf(arrayLista.get(2)));
+            turnOn(line12, slot10, t10, String.valueOf(arrayLista.get(10)));
+            turnOn(line9, slot04, t04, String.valueOf(arrayLista.get(4)));
+            turnOn(line13, slot12, t12, String.valueOf(arrayLista.get(12)));
+            caminhamento.setText(String.valueOf(arrayLista));
         }
 
     }

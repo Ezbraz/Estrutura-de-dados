@@ -90,7 +90,7 @@
       <Text fill="#9c9c9c" layoutX="467.0" layoutY="710.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Projeto desenvolvido para a disciplina de Estrutura de Dados - UFPB - 2022" />
       <ImageView fx:id="icon" fitHeight="100.0" fitWidth="200.0" layoutX="75.0" layoutY="32.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@assets/users.png" />
+            <Image url="@assets/layer.png" />
          </image>
       </ImageView>
       <Line endX="250.0" layoutY="420.0" stroke="#dddddd" strokeWidth="0.5" />

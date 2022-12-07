@@ -119,6 +119,14 @@
             <Line fx:id="line12" endX="217.0" endY="-24.0" layoutX="306.0" layoutY="481.0" startX="217.0" startY="-38.0" visible="false" />
             <Line fx:id="line13" endX="327.0" endY="-32.0" layoutX="316.0" layoutY="491.0" startX="327.0" startY="-48.0" visible="false" />
             <Line fx:id="line14" endX="367.0" endY="-44.0" layoutX="326.0" layoutY="501.0" startX="367.0" startY="-58.0" visible="false" />
+            <Button id="btnHelp" fx:id="btnHelp" alignment="CENTER" layoutX="786.0" layoutY="14.0" mnemonicParsing="false" onMouseClicked="#helpAlert" prefHeight="30.0" prefWidth="30.0" style="-fx-background-radius: 50%; -fx-background-color: #4979e0;" text="?" textFill="WHITE">
+               <font>
+                  <Font name="SansSerif Bold" size="14.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
          </children></AnchorPane>
       <AnchorPane prefHeight="720.0" prefWidth="250.0" style="-fx-background-color: ffffff; -fx-border-color: dddddd;">
          <children>
@@ -171,7 +179,7 @@
                </cursor>
             </Button>
             <TextField fx:id="input" layoutX="15.0" layoutY="465.0" prefHeight="30.0" prefWidth="150.0" />
-            <Button fx:id="btnSubmit" layoutX="173.0" layoutY="465.0" mnemonicParsing="false" onMouseClicked="#submit" prefHeight="30.0" prefWidth="65.0" style="-fx-background-color: #4979e0;" text="Button" textFill="WHITE">
+            <Button fx:id="btnSubmit" layoutX="173.0" layoutY="465.0" mnemonicParsing="false" onMouseClicked="#submit" prefHeight="30.0" prefWidth="65.0" style="-fx-background-color: #4979e0;" text="Insert" textFill="WHITE">
                <font>
                   <Font name="SansSerif Bold" size="12.0" />
                </font></Button>
@@ -191,7 +199,7 @@
             <Font name="System Bold" size="12.0" />
          </font>
       </Text>
-      <Text fill="#656565" layoutX="15.0" layoutY="460.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Digite o elemento a ser inserido" wrappingWidth="213.19989013671875">
+      <Text fill="#656565" layoutX="15.0" layoutY="460.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Digite o elemento(numero - int) a ser inserido:" wrappingWidth="213.19989013671875">
          <font>
             <Font size="10.0" />
          </font>
@@ -201,7 +209,7 @@
             <Font name="System Bold" size="12.0" />
          </font>
       </Text>
-      <Text fill="#656565" layoutX="15.0" layoutY="540.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Aqui será exibido o caminhamento in-ordem" wrappingWidth="213.19989013671875">
+      <Text fill="#656565" layoutX="15.0" layoutY="540.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Caminhamento in-ordem:" wrappingWidth="213.19989013671875">
          <font>
             <Font size="10.0" />
          </font>

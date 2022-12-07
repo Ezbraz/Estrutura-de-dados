@@ -110,7 +110,6 @@ public class ControllerLista {
     @FXML
     private TextField inputRemove;
 
-
     // fim inputs
 
     // botões
@@ -228,46 +227,38 @@ public class ControllerLista {
 
     @FXML
     private void insert() {
-        System.out.println("Inserindo");
-
         try {
             int position = Integer.parseInt(inputPosition.getText().trim());
             String element = inputElement.getText().trim();
             if (element.length() == 0) {
                 throw new IllegalArgumentException();
             } else if (position < 1 || listaSeq.tamanho() > 0 && position > (listaSeq.tamanho() + 1)) {
-                System.out.println("dkansdansdjo");
                 throw new NullPointerException();
             }
 
             if (listaSeq.tamanho() < 15) {
                 if (!listaSeq.insere(position, element)) {
-                    System.out.println("Error");
+                    throw new NullPointerException();
                 }
             } else {
                 throw new IndexOutOfBoundsException();
             }
 
-            System.out.println("Tamanho:" + listaSeq.tamanho());
             render();
             // limpando os inputs
             inputElement.setText("");
             inputPosition.setText("");
         } catch (NullPointerException e) {
-            System.out.println("Erro real: " + e.getMessage());
             msgErrorAlert("Posição inserida foi inválida.", "Por favor insira uma posição válida.");
         } catch (IndexOutOfBoundsException e) {
             msgErrorAlert("Lista \"Cheia\"!", "Para inserir algo novo na lista algum item deve ser removido.");
         } catch (Exception e) {
             inputErrorAlert();
-            System.out.println("Campo vazio ou caractere invalido.");
         }
     }
 
     @FXML
     private void remove() {
-        System.out.println("Removendo");
-
         try {
             if (listaSeq.tamanho() == 0) {
                 throw new NullPointerException();
@@ -279,27 +270,23 @@ public class ControllerLista {
                 msgErrorAlert("Posição invalida.", "Insira uma posição válida.");
             } else {
                 removed.setText(removido);
-                System.out.println("Elemento removido: " + removido);
             }
 
-            System.out.println("Tamanho:" + listaSeq.tamanho());
             render();
 
             // limpando os inputs
-            inputElement.setText("");
+            inputRemove.setText("");
             inputPosition.setText("");
         } catch (NullPointerException e) {
             msgErrorAlert("Lista Vazia.", "Lista vazia, um elemento deve ser inserido para poder ser removido.");
         } catch (Exception e) {
             inputErrorAlert();
-            System.out.println("Campo vazio ou caractere invalido.");
         }
     }
 
     @FXML
     private void find() {
         try {
-            System.out.println("Procurando");
             String procurado = inputSearch.getText().trim();
 
             if (procurado.length() == 0) {
@@ -323,7 +310,6 @@ public class ControllerLista {
             resultSeach.setText("");
         } catch (Exception e) {
             inputErrorAlert();
-            System.out.println("Campo vazio ou caractere invalido.");
         }
     }
 

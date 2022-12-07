@@ -116,6 +116,8 @@ public class ControllerListaEncadeada {
     private Button btnInsert;
     @FXML
     private Button btnRemove;
+    @FXML
+    private Button btnHelp;
     // fim botões
 
     // conteúdo
@@ -226,7 +228,6 @@ public class ControllerListaEncadeada {
     // func
     @FXML
     private void insert() {
-        System.out.println("Inserindo...");
         try {
             int position = Integer.parseInt(inputPosition.getText().trim());
             String element = inputElement.getText().trim();
@@ -238,13 +239,12 @@ public class ControllerListaEncadeada {
 
             if (listaEncadeada.tamanho() < 15) {
                 if (!listaEncadeada.insere(position, element)) {
-                    System.out.println("Error.");
+                    throw new NullPointerException();
                 }
             } else {
                 throw new IndexOutOfBoundsException();
             }
 
-            System.out.println("Tamanho:" + listaEncadeada.tamanho());
             render();
             // limpando os inputs
             inputElement.setText("");
@@ -255,18 +255,16 @@ public class ControllerListaEncadeada {
             msgErrorAlert("Lista \"Cheia\"!", "Para inserir algo novo na lista algum item deve ser removido.");
         } catch (Exception e) {
             inputErrorAlert();
-            System.out.println("Campo vazio ou caractere invalido.");
         }
     }
 
     @FXML
     private void remove() {
-        System.out.println("Removendo");
         try {
             if (listaEncadeada.tamanho() == 0) {
                 throw new NullPointerException();
             }
-            int position = Integer.parseInt(inputRemove.getText());
+            int position = Integer.parseInt(inputRemove.getText().trim());
 
             String removido = listaEncadeada.remove(position);
 
@@ -274,28 +272,23 @@ public class ControllerListaEncadeada {
                 msgErrorAlert("Posição invalida.", "Insira uma posição válida.");
             } else {
                 removed.setText(removido);
-
-                System.out.println("Elemento removido: " + removido);
             }
 
-            System.out.println("Tamanho:" + listaEncadeada.tamanho());
             render();
 
             // limpando os inputs
-            inputElement.setText("");
+            inputRemove.setText("");
             inputPosition.setText("");
         } catch (NullPointerException e) {
             msgErrorAlert("Lista Vazia.", "Lista vazia, um elemento deve ser inserido para poder ser removido.");
         } catch (Exception e) {
             inputErrorAlert();
-            System.out.println("Campo vazio ou caractere invalido.");
         }
     }
 
     @FXML
     private void find() {
         try {
-            System.out.println("Pesquisando...");
             String procurado = inputSearch.getText().trim();
 
             if (procurado.length() == 0) {
@@ -319,7 +312,6 @@ public class ControllerListaEncadeada {
             resultSeach.setText("");
         } catch (Exception e) {
             inputErrorAlert();
-            System.out.println("Campo vazio ou caractere invalido.");
         }
     }
 
@@ -549,6 +541,16 @@ public class ControllerListaEncadeada {
         alert.setTitle("Aviso!");
         alert.setHeaderText("Campo vazio ou caractere invalido.");
         alert.setContentText("Verifique os campos inseridos.");
+        alert.showAndWait();
+    }
+
+    @FXML
+    private void helpAlert() {
+        Alert alert = new Alert(AlertType.INFORMATION);
+        alert.setTitle("Help!");
+        alert.setHeaderText("Info.");
+        alert.setContentText(
+                "Para fins didáticos o tamanho máximo dessa Lista Encadeada são 15 elementos, em condições normais não há limitação a não ser a questão de memória.");
         alert.showAndWait();
     }
 }

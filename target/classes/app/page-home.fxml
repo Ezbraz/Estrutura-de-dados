@@ -62,7 +62,7 @@
                   <Cursor fx:constant="HAND" />
                </cursor>
             </Button>
-            <Button fx:id="btnList1" layoutX="15.0" layoutY="675.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="220.0" style="-fx-border-radius: 5px; -fx-background-color: #4979e0;" text="Sair" textFill="WHITE">
+            <Button fx:id="btnList1" layoutX="15.0" layoutY="675.0" mnemonicParsing="false" onAction="#sair" prefHeight="30.0" prefWidth="220.0" style="-fx-border-radius: 5px; -fx-background-color: #4979e0;" text="Sair" textFill="WHITE">
                <font>
                   <Font name="SansSerif" size="14.0" />
                </font>

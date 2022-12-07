@@ -3,8 +3,10 @@ package app;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
+import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
+import javafx.scene.control.Alert.AlertType;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.shape.Rectangle;
 import javafx.scene.text.Text;
@@ -34,9 +36,9 @@ public class ControllerPilha {
 
     @FXML
     private Button btnTree;
-//----------------------------------slots
-    //----------------------------------slots
-    //----------------------------------slots
+    // ----------------------------------slots
+    // ----------------------------------slots
+    // ----------------------------------slots
 
     @FXML
     private Rectangle slot00;
@@ -131,36 +133,30 @@ public class ControllerPilha {
     @FXML
     private TextField textoInsert;
 
-
-    //----------------------------------slots
-    //----------------------------------slots
-    //----------------------------------slots
-
-    //----------------------------------menu
-    //----------------------------------menu
-    //----------------------------------menu
     @FXML
-    private TextField textoInsertbusca;
+    private TextField removed;
 
+    // ----------------------------------slots
+    // ----------------------------------slots
+    // ----------------------------------slots
+
+    // ----------------------------------menu
+    // ----------------------------------menu
+    // ----------------------------------menu
     @FXML
     private TextField resultBusca;
 
-
-
     @FXML
     void Busca(MouseEvent event) throws IOException {
-        String elementoBusca = textoInsertbusca.getText();
-        for(int i=0; i<array.size(); i++){
-            if(array.get(i).equals(elementoBusca)){
-                posicoes.add(i);
-            }
-        }
-        String casa = String.valueOf(posicoes.get(0));
-        if(!posicoes.isEmpty()) {
-            resultBusca.setText(casa);
-            posicoes.remove(0);
+        try {
+            resultBusca.setText(array.get(array.size() - 1));
+        } catch (Exception e) {
+            resultBusca.setText("");
+            msgErrorAlert("Pilha vazia!",
+                    "A pilha está vazia, não há nada a ser consultado.");
         }
     }
+
     @FXML
     void GoToLista(MouseEvent event) throws IOException {
         Stage stage = (Stage) btnList.getScene().getWindow();
@@ -187,6 +183,7 @@ public class ControllerPilha {
         stage.setTitle("Estrutura de dados - Pilha");
         stage.setScene(scene);
     }
+
     @FXML
     void GoToFila(MouseEvent event) throws IOException {
         Stage stage = (Stage) btnQueue.getScene().getWindow();
@@ -204,6 +201,7 @@ public class ControllerPilha {
         stage.setTitle("Estrutura de dados - Arvore");
         stage.setScene(scene);
     }
+
     @FXML
     void GoToHome(MouseEvent event) throws IOException {
         Stage stage = (Stage) btnList1.getScene().getWindow();
@@ -215,58 +213,77 @@ public class ControllerPilha {
 
     @FXML
     void insert(MouseEvent event) {
-        String elemento = textoInsert.getText();
-        array.add(elemento);
-        setAllPossibleVisible();
+        try {
+            String elemento = textoInsert.getText().trim();
+
+            if (elemento.length() == 0) {
+                throw new NullPointerException();
+            } else if (array.size() == 15) {
+                throw new IndexOutOfBoundsException("Index 16 out of bounds for length 15");
+            }
+
+            array.add(elemento);
+            setAllPossibleVisible();
+
+            textoInsert.setText("");
+        } catch (IndexOutOfBoundsException e) {
+            msgErrorAlert("Pilha cheia!",
+                    "A pilha está cheia, se deseja inserir um elemento algum outro deve ser removido antes.");
+        } catch (Exception e) {
+            inputErrorAlert(); // campo vazio
+        }
     }
 
     @FXML
     void remove(MouseEvent event) {
-        int tamanho = array.size();
-        array.remove(tamanho-1);
-        setAllPossibleVisibleRemove();
+        try {
+            int tamanho = array.size();
+            removed.setText(array.remove(tamanho - 1));
+            setAllPossibleVisibleRemove();
+        } catch (IndexOutOfBoundsException e) {
+            msgErrorAlert("Pilha vazia!",
+                    "A pilha está vazia, se deseja remover um elemento por favor insira algum antes.");
+        }
+
     }
 
-    void setSlotVisible(Rectangle slot, Text text){
-        if(!slot.isVisible()){
+    void setSlotVisible(Rectangle slot, Text text) {
+        if (!slot.isVisible()) {
             slot.setVisible(true);
             text.setVisible(true);
-        }else if (slot.isVisible()){
+        } else if (slot.isVisible()) {
             slot.setVisible(false);
             text.setVisible(false);
         }
     }
 
-    void setAllPossibleVisible(){
-        if(array.size() == 1){
+    void setAllPossibleVisible() {
+        if (array.size() == 1) {
             setSlotVisible(slot00, t00);
             t00.setText(array.get(0));
-        } else if (array.size()==2){
+        } else if (array.size() == 2) {
             setSlotVisible(slot01, t01);
             t00.setText(array.get(0));
             t01.setText(array.get(1));
-        } else if (array.size()==3){
+        } else if (array.size() == 3) {
             setSlotVisible(slot02, t02);
             t00.setText(array.get(0));
             t01.setText(array.get(1));
             t02.setText(array.get(2));
-        }
-        else if (array.size()==4){
+        } else if (array.size() == 4) {
             setSlotVisible(slot03, t03);
             t00.setText(array.get(0));
             t01.setText(array.get(1));
             t02.setText(array.get(2));
             t03.setText(array.get(3));
-        }
-        else if (array.size()==5){
+        } else if (array.size() == 5) {
             setSlotVisible(slot04, t04);
             t00.setText(array.get(0));
             t01.setText(array.get(1));
             t02.setText(array.get(2));
             t03.setText(array.get(3));
             t04.setText(array.get(4));
-        }
-        else if (array.size()==6){
+        } else if (array.size() == 6) {
             setSlotVisible(slot05, t05);
             t00.setText(array.get(0));
             t01.setText(array.get(1));
@@ -274,8 +291,7 @@ public class ControllerPilha {
             t03.setText(array.get(3));
             t04.setText(array.get(4));
             t05.setText(array.get(5));
-        }
-        else if (array.size()==7){
+        } else if (array.size() == 7) {
             setSlotVisible(slot06, t06);
             t00.setText(array.get(0));
             t01.setText(array.get(1));
@@ -284,8 +300,7 @@ public class ControllerPilha {
             t04.setText(array.get(4));
             t05.setText(array.get(5));
             t06.setText(array.get(6));
-        }
-        else if (array.size()==8){
+        } else if (array.size() == 8) {
             setSlotVisible(slot07, t07);
             t00.setText(array.get(0));
             t01.setText(array.get(1));
@@ -295,8 +310,7 @@ public class ControllerPilha {
             t05.setText(array.get(5));
             t06.setText(array.get(6));
             t07.setText(array.get(7));
-        }
-        else if (array.size()==9){
+        } else if (array.size() == 9) {
             setSlotVisible(slot08, t08);
             t00.setText(array.get(0));
             t01.setText(array.get(1));
@@ -307,8 +321,7 @@ public class ControllerPilha {
             t06.setText(array.get(6));
             t07.setText(array.get(7));
             t08.setText(array.get(8));
-        }
-        else if (array.size()==10){
+        } else if (array.size() == 10) {
             setSlotVisible(slot09, t09);
             t00.setText(array.get(0));
             t01.setText(array.get(1));
@@ -320,8 +333,7 @@ public class ControllerPilha {
             t07.setText(array.get(7));
             t08.setText(array.get(8));
             t09.setText(array.get(9));
-        }
-        else if (array.size()==11){
+        } else if (array.size() == 11) {
             setSlotVisible(slot10, t10);
             t00.setText(array.get(0));
             t01.setText(array.get(1));
@@ -334,8 +346,7 @@ public class ControllerPilha {
             t08.setText(array.get(8));
             t09.setText(array.get(9));
             t10.setText(array.get(10));
-        }
-        else if (array.size()==12){
+        } else if (array.size() == 12) {
             setSlotVisible(slot11, t11);
             t00.setText(array.get(0));
             t01.setText(array.get(1));
@@ -349,8 +360,7 @@ public class ControllerPilha {
             t09.setText(array.get(9));
             t10.setText(array.get(10));
             t11.setText(array.get(11));
-        }
-        else if (array.size()==13){
+        } else if (array.size() == 13) {
             setSlotVisible(slot12, t12);
             t00.setText(array.get(0));
             t01.setText(array.get(1));
@@ -365,8 +375,7 @@ public class ControllerPilha {
             t10.setText(array.get(10));
             t11.setText(array.get(11));
             t12.setText(array.get(12));
-        }
-        else if (array.size()==14){
+        } else if (array.size() == 14) {
             setSlotVisible(slot13, t13);
             t00.setText(array.get(0));
             t01.setText(array.get(1));
@@ -382,8 +391,7 @@ public class ControllerPilha {
             t11.setText(array.get(11));
             t12.setText(array.get(12));
             t13.setText(array.get(13));
-        }
-        else if (array.size()==15){
+        } else if (array.size() == 15) {
             setSlotVisible(slot14, t14);
             t00.setText(array.get(0));
             t01.setText(array.get(1));
@@ -403,33 +411,32 @@ public class ControllerPilha {
         }
 
     }
-    void setAllPossibleVisibleRemove(){
-        if(array.size() == 0) {
+
+    void setAllPossibleVisibleRemove() {
+        if (array.size() == 0) {
             setSlotVisible(slot00, t00);
-        }else if(array.size() == 1){
+        } else if (array.size() == 1) {
             setSlotVisible(slot01, t01);
             t00.setText(array.get(0));
-        } else if (array.size()==2){
+        } else if (array.size() == 2) {
 
             setSlotVisible(slot02, t02);
             t00.setText(array.get(0));
             t01.setText(array.get(1));
-        } else if (array.size()==3){
+        } else if (array.size() == 3) {
 
             setSlotVisible(slot03, t03);
             t00.setText(array.get(0));
             t01.setText(array.get(1));
             t02.setText(array.get(2));
-        }
-        else if (array.size()==4){
+        } else if (array.size() == 4) {
 
             setSlotVisible(slot04, t04);
             t00.setText(array.get(0));
             t01.setText(array.get(1));
             t02.setText(array.get(2));
             t03.setText(array.get(3));
-        }
-        else if (array.size()==5){
+        } else if (array.size() == 5) {
 
             setSlotVisible(slot05, t05);
             t00.setText(array.get(0));
@@ -437,8 +444,7 @@ public class ControllerPilha {
             t02.setText(array.get(2));
             t03.setText(array.get(3));
             t04.setText(array.get(4));
-        }
-        else if (array.size()==6){
+        } else if (array.size() == 6) {
             setSlotVisible(slot06, t06);
             t00.setText(array.get(0));
             t01.setText(array.get(1));
@@ -446,8 +452,7 @@ public class ControllerPilha {
             t03.setText(array.get(3));
             t04.setText(array.get(4));
             t05.setText(array.get(5));
-        }
-        else if (array.size()==7){
+        } else if (array.size() == 7) {
             setSlotVisible(slot07, t07);
             t00.setText(array.get(0));
             t01.setText(array.get(1));
@@ -456,8 +461,7 @@ public class ControllerPilha {
             t04.setText(array.get(4));
             t05.setText(array.get(5));
             t06.setText(array.get(6));
-        }
-        else if (array.size()==8){
+        } else if (array.size() == 8) {
 
             setSlotVisible(slot08, t08);
             t00.setText(array.get(0));
@@ -468,8 +472,7 @@ public class ControllerPilha {
             t05.setText(array.get(5));
             t06.setText(array.get(6));
             t07.setText(array.get(7));
-        }
-        else if (array.size()==9){
+        } else if (array.size() == 9) {
 
             setSlotVisible(slot09, t09);
             t00.setText(array.get(0));
@@ -481,8 +484,7 @@ public class ControllerPilha {
             t06.setText(array.get(6));
             t07.setText(array.get(7));
             t08.setText(array.get(8));
-        }
-        else if (array.size()==10){
+        } else if (array.size() == 10) {
 
             setSlotVisible(slot10, t10);
             t00.setText(array.get(0));
@@ -495,8 +497,7 @@ public class ControllerPilha {
             t07.setText(array.get(7));
             t08.setText(array.get(8));
             t09.setText(array.get(9));
-        }
-        else if (array.size()==11){
+        } else if (array.size() == 11) {
 
             setSlotVisible(slot11, t11);
             t00.setText(array.get(0));
@@ -510,8 +511,7 @@ public class ControllerPilha {
             t08.setText(array.get(8));
             t09.setText(array.get(9));
             t10.setText(array.get(10));
-        }
-        else if (array.size()==12){
+        } else if (array.size() == 12) {
 
             setSlotVisible(slot12, t12);
             t00.setText(array.get(0));
@@ -526,8 +526,7 @@ public class ControllerPilha {
             t09.setText(array.get(9));
             t10.setText(array.get(10));
             t11.setText(array.get(11));
-        }
-        else if (array.size()==13){
+        } else if (array.size() == 13) {
 
             setSlotVisible(slot13, t13);
             t00.setText(array.get(0));
@@ -543,8 +542,7 @@ public class ControllerPilha {
             t10.setText(array.get(10));
             t11.setText(array.get(11));
             t12.setText(array.get(12));
-        }
-        else if (array.size()==14){
+        } else if (array.size() == 14) {
             setSlotVisible(slot14, t14);
             t00.setText(array.get(0));
             t01.setText(array.get(1));
@@ -562,5 +560,22 @@ public class ControllerPilha {
             t13.setText(array.get(13));
         }
 
+    }
+
+    // alertas
+    private void msgErrorAlert(String title, String textContent) {
+        Alert alert = new Alert(AlertType.ERROR);
+        alert.setTitle("Aviso!");
+        alert.setHeaderText(title);
+        alert.setContentText(textContent);
+        alert.showAndWait();
+    }
+
+    private void inputErrorAlert() {
+        Alert alert = new Alert(AlertType.ERROR);
+        alert.setTitle("Aviso!");
+        alert.setHeaderText("Campo vazio.");
+        alert.setContentText("Verifique os campos inseridos.");
+        alert.showAndWait();
     }
 }

@@ -1,5 +1,6 @@
 package app;
 
+import javafx.application.Platform;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
@@ -55,6 +56,7 @@ public class ControllerHome {
         stage.setTitle("Estrutura de dados - Pilha");
         stage.setScene(scene);
     }
+
     @FXML
     void GoToFila(MouseEvent event) throws IOException {
         Stage stage = (Stage) btnQueue.getScene().getWindow();
@@ -73,6 +75,8 @@ public class ControllerHome {
         stage.setScene(scene);
     }
 
-
+    @FXML
+    void sair() {
+        Platform.exit();
+    }
 }
-

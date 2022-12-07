@@ -105,6 +105,16 @@
                   <Font name="SansSerif" size="20.0" />
                </font>
             </Text>
+            <TextField id="removed" fx:id="removed" editable="false" layoutX="696.0" layoutY="647.0" prefHeight="37.0" prefWidth="126.0">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </TextField>
+            <Text fill="#4979e0" layoutX="696.0" layoutY="623.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Ultimo elemento removido:" wrappingWidth="120.0">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Text>
          </children></AnchorPane>
       <AnchorPane maxHeight="720.0" maxWidth="250.0" minHeight="720.0" minWidth="250.0" prefHeight="720.0" prefWidth="250.0" style="-fx-background-color: ffffff; -fx-border-color: dddddd;">
          <children>
@@ -177,7 +187,7 @@
                   <Cursor fx:constant="HAND" />
                </cursor>
             </Button>
-            <Text fill="#656565" layoutX="15.0" layoutY="460.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Digite o elemento a ser inserido" wrappingWidth="213.19989013671875">
+            <Text fill="#656565" layoutX="15.0" layoutY="460.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Digite o elemento a ser inserido:" wrappingWidth="213.19989013671875">
                <font>
                   <Font size="10.0" />
                </font>
@@ -195,7 +205,7 @@
                   <Font name="System Bold" size="12.0" />
                </font>
             </Text>
-            <Text fill="#656565" layoutX="15.0" layoutY="540.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Pressione o botão para remover o topo da pilha" wrappingWidth="213.19989013671875">
+            <Text fill="#656565" layoutX="15.0" layoutY="540.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Pressione o botão para remover o topo da pilha:" wrappingWidth="213.19989013671875">
                <font>
                   <Font size="10.0" />
                </font>
@@ -205,13 +215,13 @@
                   <Font name="System Bold" size="12.0" />
                </font>
             </Text>
-            <Text fill="#656565" layoutX="15.0" layoutY="620.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Digite o elemento que deseja encontrar a posição" wrappingWidth="225.0">
+            <Text fill="#656565" layoutX="15.0" layoutY="620.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Consultar o topo da pilha:" wrappingWidth="225.0">
                <font>
                   <Font size="10.0" />
                </font>
             </Text>
-            <TextField fx:id="textoInsertbusca" layoutX="15.0" layoutY="625.0" prefHeight="30.0" prefWidth="100.0" />
-            <Button id="tbnSearch" fx:id="search" layoutX="122.0" layoutY="625.0" mnemonicParsing="false" onMouseClicked="#Busca" prefHeight="30.0" prefWidth="60.0" style="-fx-background-color: #4979e0;" text="Search" textFill="WHITE">
+            <TextField id="resultBusca" fx:id="resultBusca" editable="false" layoutX="15.0" layoutY="625.0" prefHeight="30.0" prefWidth="100.0" />
+            <Button id="tbnSearch" fx:id="search" layoutX="122.0" layoutY="625.0" mnemonicParsing="false" onMouseClicked="#Busca" prefHeight="30.0" prefWidth="112.0" style="-fx-background-color: #4979e0;" text="Search" textFill="WHITE">
                <font>
                   <Font name="SansSerif Bold" size="12.0" />
                </font>
@@ -219,7 +229,6 @@
                   <Cursor fx:constant="HAND" />
                </cursor>
             </Button>
-            <TextField fx:id="resultBusca" layoutX="190.0" layoutY="625.0" prefHeight="30.0" prefWidth="45.0" />
          </children>
       </AnchorPane>
       <Text fill="#9c9c9c" layoutX="467.0" layoutY="710.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Projeto desenvolvido para a disciplina de Estrutura de Dados - UFPB - 2022" />

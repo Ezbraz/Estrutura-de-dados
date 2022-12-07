@@ -222,7 +222,7 @@
             <Font name="System Bold" size="12.0" />
          </font>
       </Text>
-      <Text fill="#656565" layoutX="15.0" layoutY="540.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Digite o elemento e a posição a ser excluído" wrappingWidth="213.19989013671875">
+      <Text fill="#656565" layoutX="15.0" layoutY="540.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Digite a posição do elemento a ser excluído:" wrappingWidth="213.19989013671875">
          <font>
             <Font size="10.0" />
          </font>

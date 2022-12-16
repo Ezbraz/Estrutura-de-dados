@@ -223,6 +223,8 @@ public class ControllerListaEncadeada {
     private Circle label15;
     @FXML
     private Text content15;
+    @FXML
+    private Line link15_16;
     // fim conteudo
 
     // func
@@ -515,13 +517,13 @@ public class ControllerListaEncadeada {
         if (!("").equals(listaEncadeada.elemento(15))) {
             label15.setVisible(true);
             content15.setVisible(true);
-            // link9_10.setVisible(true);
+            link15_16.setVisible(true);
 
-            content15.setText(listaEncadeada.elemento(15));
+            content15.setText(listaEncadeada.elemento(15));                         
         } else {
             label15.setVisible(false);
             content15.setVisible(false);
-            // link9_10.setVisible(false);
+            link15_16.setVisible(false);
 
             content15.setText(" ");
         }
